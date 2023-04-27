@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<body>
+    <code markdown>
+
+# update log
+
+- 2023/4/20 create this page.
+
+- 4/27 important update.
+
+    </code>
+    <script src="https://cdn.jsdelivr.net/npm/marked@3.0.0/marked.min.js"></script>
+    <script>
+        var m = document.querySelectorAll('code[markdown]');
+        for (var i = 0; i < m.length; i++) {
+            m[i].outerHTML = '<div>' + marked(m[i].innerHTML) + '</div>';
+        }
+    </script>
+</body>
