@@ -19,25 +19,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"mahaoming2022.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Mahaoming&#39;s home page">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Mahaoming">
-<meta property="og:url" content="http://mahaoming2022.github.io/index.html">
+    <meta name="description" content="前情 当场没做 D 来做 E 是明智的，D 根本想不到的。 题目 翻译一下：  高桥准备 \(n\) 个菜，每个菜肴有甜味值 \(a_i\) 和 咸味值 \(b_i\)。高桥可以按任意顺序排放这些菜肴。Snuke 按排放的顺序吃，当吃的总甜味值大于 \(X\) 或总咸味值大于 \(Y\) 时停止。求吃的菜肴总数的最大值。  思路 Step 1 这道题和 C 题如出一辙，但">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AT_abc364_e [ABC364E] Maximum Glutton">
+<meta property="og:url" content="http://mahaoming2022.github.io/2024/08/05/AT-abc364-e-ABC364E-Maximum-Glutton/index.html">
 <meta property="og:site_name" content="Mahaoming">
-<meta property="og:description" content="Mahaoming&#39;s home page">
+<meta property="og:description" content="前情 当场没做 D 来做 E 是明智的，D 根本想不到的。 题目 翻译一下：  高桥准备 \(n\) 个菜，每个菜肴有甜味值 \(a_i\) 和 咸味值 \(b_i\)。高桥可以按任意顺序排放这些菜肴。Snuke 按排放的顺序吃，当吃的总甜味值大于 \(X\) 或总咸味值大于 \(Y\) 时停止。求吃的菜肴总数的最大值。  思路 Step 1 这道题和 C 题如出一辙，但">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-08-05T10:56:13.000Z">
+<meta property="article:modified_time" content="2024-08-05T11:33:04.005Z">
 <meta property="article:author" content="Ma Haoming">
+<meta property="article:tag" content="OI">
+<meta property="article:tag" content="动态规划 DP">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://mahaoming2022.github.io/">
+<link rel="canonical" href="http://mahaoming2022.github.io/2024/08/05/AT-abc364-e-ABC364E-Maximum-Glutton/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://mahaoming2022.github.io/2024/08/05/AT-abc364-e-ABC364E-Maximum-Glutton/","path":"2024/08/05/AT-abc364-e-ABC364E-Maximum-Glutton/","title":"AT_abc364_e [ABC364E] Maximum Glutton"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Mahaoming</title>
+<title>AT_abc364_e [ABC364E] Maximum Glutton | Mahaoming</title>
   
 
 
@@ -74,7 +78,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Mahaoming</h1>
+      <p class="site-title">Mahaoming</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">Home Page</p>
@@ -101,7 +105,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -114,6 +118,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%83%85"><span class="nav-number">1.</span> <span class="nav-text">前情</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">2.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#step-1"><span class="nav-number">3.1.</span> <span class="nav-text">Step 1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#step-2"><span class="nav-number">4.</span> <span class="nav-text">Step 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#step-3"><span class="nav-number">5.</span> <span class="nav-text">Step 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -163,16 +168,17 @@
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="http://mahaoming2022.github.io/2024/08/05/AT-abc364-e-ABC364E-Maximum-Glutton/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -186,13 +192,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Mahaoming">
+      <meta itemprop="name" content="AT_abc364_e [ABC364E] Maximum Glutton | Mahaoming">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/08/05/AT-abc364-e-ABC364E-Maximum-Glutton/" class="post-title-link" itemprop="url">AT_abc364_e [ABC364E] Maximum Glutton</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          AT_abc364_e [ABC364E] Maximum Glutton
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -228,8 +234,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="前情">前情</h2>
+    <div class="post-body" itemprop="articleBody"><h2 id="前情">前情</h2>
 <p>当场没做 D 来做 E 是明智的，D 根本想不到的。</p>
 <h2 id="题目">题目</h2>
 <p>翻译一下：</p>
@@ -385,7 +390,6 @@ target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc364/submissi
 <p><strong>但是本题解给出的方法只是思考的时候用的，并不是证明</strong>。有疑问或证明欢迎评论！</p>
 <p>难度评级：绿或蓝。</p>
 
-      
     </div>
 
     
@@ -393,383 +397,26 @@ target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc364/submissi
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-tags">
+              <a href="/tags/OI/" rel="tag"># OI</a>
+              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-DP/" rel="tag"># 动态规划 DP</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/07/09/test/" rel="prev" title="test">
+                  <i class="fa fa-angle-left"></i> test
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://mahaoming2022.github.io/2024/04/21/27-7iimid-md/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/./images/avatar.jpg">
-      <meta itemprop="name" content="Ma Haoming">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Mahaoming">
-      <meta itemprop="description" content="Mahaoming's home page">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Mahaoming">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/04/21/27-7iimid-md/" class="post-title-link" itemprop="url">27&7iimid.md</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2024-04-21 22:21:36" itemprop="dateCreated datePublished" datetime="2024-04-21T22:21:36+08:00">2024-04-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-08-05 19:32:45" itemprop="dateModified" datetime="2024-08-05T19:32:45+08:00">2024-08-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/whk/" itemprop="url" rel="index"><span itemprop="name">whk</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/whk/%E5%AD%A6%E6%A0%A1%E5%A4%A7%E8%80%83/" itemprop="url" rel="index"><span itemprop="name">学校大考</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>WOT 2024 第 1 期日报 27中七下期中游记</p>
-<p>Time flies.转眼又考试了.</p>
-<p>前两次应该说还好,这次不会炸吧?</p>
-<p>2023期中: 286.5 rnk校=(20,30)</p>
-<p>2024七上期末: 776 rnk校=19(18?)</p>
-<blockquote>
-<p>题外话,教你们一个查排名的办法: F12.
-点击红旗-&gt;检查-&gt;百分比即排名</p>
-</blockquote>
-<p>切入游记正题.</p>
-<h3 id="day-0-考试前一天20240414">day 0 (考试前一天,20240414)</h3>
-<p>呃呃.</p>
-<p>晚上押作文.去年湖南长沙考了「平凡的XX」XX不记得了.</p>
-<h3 id="day-1语文">day 1(语文)</h3>
-<p>晚上睡不着,早上起来爆物理(初三第一课).</p>
-<p>烦死了,中午也不凡则睡.</p>
-<p>下午去的有点晚.天还下着雨,还不小,看着就有不详的预感.</p>
-<p>进入考场更是的.每次「请考试将与学科有关的物品...」唯独我一个不出去放——我不临时抱佛脚的.</p>
-<p>老师很磨叽,卷子不提前发.开卷第一件事看作文,结果真押对了..qwq.</p>
-<p>我暗自庆幸,但事实并不如我所料.默写很顺利.语段顺利.啊?名著题什么东西?wc三空3pts一个不会!全靠蒙!</p>
-<p>假设我三个都蒙对,但是...顺序!这样算了只有 <span
-class="math inline">\(\frac{1}{6}\)</span> 的胜率!</p>
-<p>先空着吧.</p>
-<p>什么东西?对联又坑人!经我犹豫填对了.阅读古文不想说,愿无锅吧!</p>
-<p>最后是作文.作文真是对的题,但不是特别手到擒来的题.我想了很久才开始写,也尝试写「工整美观」.</p>
-<p>时间一分一秒过去.什么?只剩15min了!我我我我!还有100字!</p>
-<p>拼命了!我去!结果最后的字迹略微草率.唉总算好了.</p>
-<p>我记得去蒙前面的题...qwq</p>
-<p>估分120很险.很难.</p>
-<p>出来跟lyc交流了一下,ta也说难.</p>
-<p>啊!我3空全错你!我暗想:我错,人家也错...qwq</p>
-<p>好吧,我家长又要聊天了qwq....</p>
-<blockquote>
-<p>有两个家长,我简记为:小M家长,小N家长.小M成绩在「重点班」(其实是骗子)rnk2,很自以为是;小N是我同学,差的.大概小M比我低1档,N比我低2档,一档10人(我觉得在一个班)</p>
-</blockquote>
-<p>一过了,小M,N就开始...</p>
-<p>小N家长:简单!</p>
-<p>小M家长:三空我家都对了.</p>
-<p>小N家长还拍了TA在watch
-TV的视频.wc!都觉得简单是吧.我不禁大骂:小心乐极生悲!(我们班主任口头禅)您能想象我的愤怒啊!</p>
-<p>废了,被一顿训...qwq你隔着屏幕可以想象的.</p>
-<p>人狂必有祸,后来小N默写错!</p>
-<p>我劝说我家长:语文炸了,day2&amp;3不一定不会翻盘呢?</p>
-<p>家长:反正你rnk班1没了.</p>
-<p>没用自己知道行了.sb</p>
-<blockquote>
-<p>补充:
-小N是一个非常要面子且吹牛的人,他平时数学[120,130],你知道他水平了.但他每次都说他满分,sb!</p>
-</blockquote>
-<h3 id="day-2-数学">day 2 数学</h3>
-<p>数学,我的天下.</p>
-<p>上午先秒杀AH2020疫情中考,成功150.<del>我的信心得到鼓舞</del><strong>下午力争翻盘!</strong></p>
-<p>下午是个好天气,阳光明媚(天气真不是我造的,我不是那些没脸的文学家)</p>
-<p>还有难度,选择压轴细节,填空有一道我开始没想出来后来1s解决的,大题均设分类讨论,最后一题外角定理秒杀.</p>
-<p>我先跟lyc对了一下,wow!150~</p>
-<p>我洋溢着喜悦回班见老慈(班主任)</p>
-<p>小N: 简单 我心中暗骂:sb 结果他估分140,我们拭目以待.</p>
-<p>小M: 150.
-我们也拭目以待.他们说话很有水分.<del>我就不..............(此处省略100字qwq)</del></p>
-<p><strong>明天英语继续哦~</strong></p>
-<p>补充:</p>
-<p>今天,我听有人说「拔剑特训」上有原题,而小M不就是做嘛!结果ta根本不承认.后来在我逼迫下承认的.qwq</p>
-<h3 id="day-3-英语">day 3 英语</h3>
-<p>是个阴天.进考场发卷子就狂风大雨.</p>
-<p>做完一题不会,估分119-作文[1,2].</p>
-<p>对答案,一份不挂.好耶!还是119-作文</p>
-<p>上电脑班拿伞被骂nj...qwq</p>
-<p>小N: 115-作文</p>
-<p>小M: 118-作文</p>
-<p>班上同学有点悬,好像有点失误吧他们.</p>
-<p><del>这不就翻盘了吗?</del></p>
-<p>但是没小M高aaa.qwq人家小M是女生qAQ.</p>
-<h3 id="day-6-出成绩">day 6 出成绩</h3>
-<p>中午手机炸了.</p>
-<p>查得,390 rnk校=42.</p>
-<p>卧槽,小M直接397rnk=8我去他们班一号.</p>
-<p>唉,小N就是在吹牛,就360qwq.</p>
-<p>啊啊啊,这次怎么被小M整了?</p>
-<p>后来,zyz都393就我最差是吧??qwq</p>
-<p>没事没事,这次数学英语发挥稳定,语文略有失误.况且这次对题海很友好.qwq</p>
-<p>达克.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://mahaoming2022.github.io/2024/07/09/test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/./images/avatar.jpg">
-      <meta itemprop="name" content="Ma Haoming">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Mahaoming">
-      <meta itemprop="description" content="Mahaoming's home page">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Mahaoming">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/09/test/" class="post-title-link" itemprop="url">test</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2024-07-09 22:00:34" itemprop="dateCreated datePublished" datetime="2024-07-09T22:00:34+08:00">2024-07-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-08-05 19:33:15" itemprop="dateModified" datetime="2024-08-05T19:33:15+08:00">2024-08-05</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><span class="math inline">\(\sum\limits^{n}_{j=1}a_j\)</span></p>
-<p><span class="math display">\[\Phi \Pi \times\]</span></p>
-<p><span class="math display">\[E=mc^2\]</span></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">1</th>
-<th style="text-align: center;">2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">A</td>
-<td style="text-align: center;">A</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ohaaaaaaaaa!</span><br><span class="line"></span><br><span class="line">WOT YYDS</span><br><span class="line"></span><br><span class="line">  ███╗   ██╗███████╗██╗  ██╗████████╗</span><br><span class="line">  ████╗  ██║██╔════╝╚██╗██╔╝╚══██╔══╝</span><br><span class="line">  ██╔██╗ ██║█████╗   ╚███╔╝    ██║</span><br><span class="line">  ██║╚██╗██║██╔══╝   ██╔██╗    ██║</span><br><span class="line">  ██║ ╚████║███████╗██╔╝ ██╗   ██║</span><br><span class="line">  ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝   ╚═╝</span><br></pre></td></tr></table></figure>
-<h1 id="wot-great">WOT GREAT!</h1>
-<h2 id="tpcpp-...">TPCpp ...</h2>
-<p><img
-src="https://avatars.githubusercontent.com/u/111100170?s=48&amp;v=4" /></p>
-<p>OH YEAH!</p>
-<blockquote>
-<p>AH Wuhu Jinhu 27 mid</p>
-</blockquote>
-<blockquote>
-<p>33256</p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://mahaoming2022.github.io/2024/07/06/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/./images/avatar.jpg">
-      <meta itemprop="name" content="Ma Haoming">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Mahaoming">
-      <meta itemprop="description" content="Mahaoming's home page">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Mahaoming">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/06/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2024-07-06 22:30:09" itemprop="dateCreated datePublished" datetime="2024-07-06T22:30:09+08:00">2024-07-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-08-05 19:33:11" itemprop="dateModified" datetime="2024-08-05T19:33:11+08:00">2024-08-05</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very
-first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for
-more info. If you get any problems when using Hexo, you can find the
-answer in <a
-target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
-you can ask me on <a
-target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<p><span class="math inline">\(\sum\)</span></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a
-target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
