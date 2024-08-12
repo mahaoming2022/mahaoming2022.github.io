@@ -19,28 +19,31 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"mahaoming2022.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Part 0  音乐能激发或抚慰情怀，绘画使人赏心悦目，诗歌能动人心弦，哲学使人获得智慧，科学可改善物质生活，但数学能给予以上的一切。  Part 1  姓名：马浩鸣 出生年月：2011&#x2F;02&#x2F;20 地区：中国，安徽芜湖，镜湖区 ID: da_ke （绝大多数网站，早期注册另有 vector1024，WA_Coding_Duck） 身份：半退役 OIer，WHKer，数学爱好">
+    <meta name="description" content="题解：AT_abc366_c [ABC366C] 前言 题目已经翻译好了，故不提供翻译解释。 正解 需注意：编号为 \(x\) 的球可以有很多个，赛场上因此痛吃罚时。 考虑到 \(x\in [1,10^6]\)，数据范围较小，故开一个桶：\(s_x\) 记录 \(x\) 出现的次数。 同时维护一个集合，记录目前还存在的球种类。考虑到我们只关心球种类的数量，故可将集合变为一个计数器。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://mahaoming2022.github.io/2024/08/09/about/index.html">
+<meta property="og:title" content="题解：AT_abc366_c [ABC366C] Balls and Bag Query">
+<meta property="og:url" content="http://mahaoming2022.github.io/2024/08/12/%E9%A2%98%E8%A7%A3%EF%BC%9AAT-abc366-c-ABC366C-Balls-and-Bag-Query/index.html">
 <meta property="og:site_name" content="Mahaoming">
-<meta property="og:description" content="Part 0  音乐能激发或抚慰情怀，绘画使人赏心悦目，诗歌能动人心弦，哲学使人获得智慧，科学可改善物质生活，但数学能给予以上的一切。  Part 1  姓名：马浩鸣 出生年月：2011&#x2F;02&#x2F;20 地区：中国，安徽芜湖，镜湖区 ID: da_ke （绝大多数网站，早期注册另有 vector1024，WA_Coding_Duck） 身份：半退役 OIer，WHKer，数学爱好">
+<meta property="og:description" content="题解：AT_abc366_c [ABC366C] 前言 题目已经翻译好了，故不提供翻译解释。 正解 需注意：编号为 \(x\) 的球可以有很多个，赛场上因此痛吃罚时。 考虑到 \(x\in [1,10^6]\)，数据范围较小，故开一个桶：\(s_x\) 记录 \(x\) 出现的次数。 同时维护一个集合，记录目前还存在的球种类。考虑到我们只关心球种类的数量，故可将集合变为一个计数器。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-08-09T10:57:52.000Z">
-<meta property="article:modified_time" content="2024-08-09T11:31:43.464Z">
+<meta property="article:published_time" content="2024-08-12T11:05:55.000Z">
+<meta property="article:modified_time" content="2024-08-12T11:07:40.282Z">
 <meta property="article:author" content="Ma Haoming">
-<meta property="article:tag" content="个人">
+<meta property="article:tag" content="OI">
+<meta property="article:tag" content="题解">
+<meta property="article:tag" content="STL">
+<meta property="article:tag" content="ABC">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://mahaoming2022.github.io/2024/08/09/about/">
+<link rel="canonical" href="http://mahaoming2022.github.io/2024/08/12/%E9%A2%98%E8%A7%A3%EF%BC%9AAT-abc366-c-ABC366C-Balls-and-Bag-Query/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://mahaoming2022.github.io/2024/08/09/about/","path":"2024/08/09/about/","title":"about"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://mahaoming2022.github.io/2024/08/12/%E9%A2%98%E8%A7%A3%EF%BC%9AAT-abc366-c-ABC366C-Balls-and-Bag-Query/","path":"2024/08/12/题解：AT-abc366-c-ABC366C-Balls-and-Bag-Query/","title":"题解：AT_abc366_c [ABC366C] Balls and Bag Query"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>about | Mahaoming</title>
+<title>题解：AT_abc366_c [ABC366C] Balls and Bag Query | Mahaoming</title>
   
 
 
@@ -117,7 +120,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#part-0"><span class="nav-number">1.</span> <span class="nav-text">Part 0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#part-1"><span class="nav-number">2.</span> <span class="nav-text">Part 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#part-2"><span class="nav-number">3.</span> <span class="nav-text">Part 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#part-3"><span class="nav-number">4.</span> <span class="nav-text">Part 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#part-4"><span class="nav-number">5.</span> <span class="nav-text">Part 4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#part-5"><span class="nav-number">6.</span> <span class="nav-text">Part 5</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3at_abc366_c-abc366c"><span class="nav-number">1.</span> <span class="nav-text">题解：AT_abc366_c [ABC366C]</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E8%A7%A3"><span class="nav-number">1.2.</span> <span class="nav-text">正解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E5%BC%BA%E7%89%88"><span class="nav-number">1.3.</span> <span class="nav-text">加强版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%BF%E5%91%8A"><span class="nav-number">1.5.</span> <span class="nav-text">广告</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -178,7 +181,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://mahaoming2022.github.io/2024/08/09/about/">
+    <link itemprop="mainEntityOfPage" href="http://mahaoming2022.github.io/2024/08/12/%E9%A2%98%E8%A7%A3%EF%BC%9AAT-abc366-c-ABC366C-Balls-and-Bag-Query/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/./images/avatar.jpg">
@@ -191,12 +194,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="about | Mahaoming">
+      <meta itemprop="name" content="题解：AT_abc366_c [ABC366C] Balls and Bag Query | Mahaoming">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          about
+          题解：AT_abc366_c [ABC366C] Balls and Bag Query
         </h1>
 
         <div class="post-meta-container">
@@ -208,7 +211,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-08-09 18:57:52 / Modified: 19:31:43" itemprop="dateCreated datePublished" datetime="2024-08-09T18:57:52+08:00">2024-08-09</time>
+      <time title="Created: 2024-08-12 19:05:55 / Modified: 19:07:40" itemprop="dateCreated datePublished" datetime="2024-08-12T19:05:55+08:00">2024-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -216,7 +219,11 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E4%B8%AA%E4%BA%BA/" itemprop="url" rel="index"><span itemprop="name">个人</span></a>
+          <a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">题解</span></a>
         </span>
     </span>
 
@@ -229,48 +236,40 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="part-0">Part 0</h2>
-<blockquote>
-<p>音乐能激发或抚慰情怀，绘画使人赏心悦目，诗歌能动人心弦，哲学使人获得智慧，科学可改善物质生活，但数学能给予以上的一切。</p>
-</blockquote>
-<h2 id="part-1">Part 1</h2>
-<ul>
-<li>姓名：马浩鸣</li>
-<li>出生年月：2011/02/20</li>
-<li>地区：中国，安徽芜湖，镜湖区</li>
-<li>ID: da_ke （绝大多数网站，早期注册另有
-vector1024，WA_Coding_Duck）</li>
-<li>身份：半退役 OIer，WHKer，数学爱好者</li>
-</ul>
-<h2 id="part-2">Part 2</h2>
-<ul>
-<li>2022 年入坑</li>
-<li>2022 年喜提初赛没过</li>
-<li>2023 年 CSP-J 贰等，游记：无</li>
-<li>【安徽特有比赛】2024 科大国创叁等（挂了不少分）</li>
-</ul>
-<h2 id="part-3">Part 3</h2>
-<ul>
-<li><p>年级：准初二</p></li>
-<li><p>现就读于芜湖市第二十七中学</p></li>
-<li><p>曾就读于芜湖市王家巷小学</p></li>
-<li><p>有初中和一点点高中数学水平</p></li>
-<li><p>2023 年中考（8 月完成，当时刚学晚初中）124 分</p></li>
-<li><p>2024 年中考（6 月完成）138 分（不该丢了 5 分）</p></li>
-<li><p>大考游记见本博客。</p></li>
-</ul>
-<h2 id="part-4">Part 4</h2>
-<ul>
-<li><a href="https://mahaoming2022.github.io">博客</a></li>
-<li>洛谷、Github 见「&lt;-」侧边栏</li>
-<li><a target="_blank" rel="noopener" href="https://codeforces.com/profile/vector1024">CF</a></li>
-<li><a target="_blank" rel="noopener" href="https://atcoder.jp/users/da_ke">AtCoder</a></li>
-</ul>
-<h2 id="part-5">Part 5</h2>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://wuhuoiteam.github.io">WOT 系列</a> 创建者</li>
-<li>命题人</li>
-</ul>
+    <div class="post-body" itemprop="articleBody"><h1 id="题解at_abc366_c-abc366c">题解：AT_abc366_c [ABC366C]</h1>
+<h2 id="前言">前言</h2>
+<p>题目已经翻译好了，故不提供翻译解释。</p>
+<h2 id="正解">正解</h2>
+<p>需注意：编号为 <span class="math inline">\(x\)</span>
+的球可以有很多个，<del>赛场上因此痛吃罚时</del>。</p>
+<p>考虑到 <span class="math inline">\(x\in
+[1,10^6]\)</span>，数据范围较小，故开一个桶：<span
+class="math inline">\(s_x\)</span> 记录 <span
+class="math inline">\(x\)</span> 出现的次数。</p>
+<p>同时维护一个集合，记录目前还存在的球种类。考虑到我们<strong>只关心球种类的数量</strong>，故可将集合变为一个计数器。</p>
+<p>代码很容易写出来。</p>
+<p>时间复杂度 <span class="math inline">\(O(Q)\)</span>，空间复杂度
+<span class="math inline">\(O(\max x)\)</span>。</p>
+<h2 id="加强版">加强版</h2>
+<p>但是如果 <span class="math inline">\(1\leq x \leq
+10^{18}\)</span>，那 <span class="math inline">\(x\)</span>
+肯定无法用桶去装了。这是因为数组一定是<strong>连续的</strong>，而事实证明根本不需要连续，因为很多数是没有出现过的。</p>
+<p>但是 <code>C++</code> 中的 <code>STL</code>
+恰恰有这么一个非连续的数据结构
+<code>map</code>。其使用方法与数组类似。</p>
+<p>注意：<code>map</code> 在没有修改的键值对应值默认是
+<code>0</code>，这里只举整数类型为例。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i,l,r) for(int i=(l);i&lt;=(r);i++)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> db;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> Q,cnt=<span class="number">0</span>;</span><br><span class="line">map&lt;ll,ll&gt; s;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> ONLINE_JUDGE</span></span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;in.in&quot;</span>,<span class="string">&quot;r&quot;</span>,stdin);</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;out.out&quot;</span>,<span class="string">&quot;w&quot;</span>,stdout);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    cin&gt;&gt;Q;</span><br><span class="line">    <span class="keyword">while</span>(Q--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> o;ll x;</span><br><span class="line">        cin&gt;&gt;o;</span><br><span class="line">        <span class="keyword">if</span>(o==<span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            cin&gt;&gt;x;</span><br><span class="line">            <span class="keyword">if</span>(s[x]==<span class="number">0</span>) cnt++;</span><br><span class="line">            s[x]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(o==<span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            cin&gt;&gt;x;</span><br><span class="line">            s[x]--;</span><br><span class="line">            <span class="keyword">if</span>(s[x]==<span class="number">0</span>) cnt--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(o==<span class="number">3</span>)</span><br><span class="line">            cout&lt;&lt;cnt&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>时间复杂度为 <span class="math inline">\(O(Q\log Q)\)</span>。因为
+<code>map</code> 一次查询的复杂度是 <span class="math inline">\(O(Q\log
+Q)\)</span> 的，且最多有 <span class="math inline">\(Q\)</span>
+个球会加入袋子。</p>
+<p>空间复杂度 <span class="math inline">\(O(Q)\)</span>，理由同上。</p>
+<h2 id="总结">总结</h2>
+<p>这道题作为 C 还是很水的，而且不必用 <code>STL</code>。</p>
+<p>AC：<a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc366/submissions/56635007"
+class="uri">https://atcoder.jp/contests/abc366/submissions/56635007</a></p>
+<h2 id="广告">广告</h2>
 
     </div>
 
@@ -280,21 +279,21 @@ vector1024，WA_Coding_Duck）</li>
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E4%B8%AA%E4%BA%BA/" rel="tag"># 个人</a>
+              <a href="/tags/OI/" rel="tag"># OI</a>
+              <a href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag"># 题解</a>
+              <a href="/tags/STL/" rel="tag"># STL</a>
+              <a href="/tags/ABC/" rel="tag"># ABC</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/08/09/%E9%A2%98%E8%A7%A3%EF%BC%9AAT-abc365-d-ABC365D-AtCoder-Janken-3/" rel="prev" title="题解：AT_abc365_d [ABC365D] AtCoder Janken 3">
-                  <i class="fa fa-angle-left"></i> 题解：AT_abc365_d [ABC365D] AtCoder Janken 3
+                <a href="/2024/08/09/about/" rel="prev" title="about">
+                  <i class="fa fa-angle-left"></i> about
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/08/12/%E9%A2%98%E8%A7%A3%EF%BC%9AAT-abc366-c-ABC366C-Balls-and-Bag-Query/" rel="next" title="题解：AT_abc366_c [ABC366C] Balls and Bag Query">
-                  题解：AT_abc366_c [ABC366C] Balls and Bag Query <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
