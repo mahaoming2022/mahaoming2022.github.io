@@ -339,7 +339,7 @@ src="https://bkimg.cdn.bcebos.com/pic/dc54564e9258d109b3de51446e11dbbf6c81810ae7
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-08-19 08:20:13" itemprop="dateModified" datetime="2024-08-19T08:20:13+08:00">2024-08-19</time>
+      <time title="Modified: 2024-08-19 19:05:09" itemprop="dateModified" datetime="2024-08-19T19:05:09+08:00">2024-08-19</time>
     </span>
 
   
@@ -356,24 +356,14 @@ src="https://bkimg.cdn.bcebos.com/pic/dc54564e9258d109b3de51446e11dbbf6c81810ae7
 Pedometer</h1>
 <h2 id="前言">前言</h2>
 <p>赛时被整懵了，赛后题解。</p>
+<p><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc367/tasks/abc367_d">AtCoder
+Problem</a></p>
 <p><a
 href="https://mahaoming2022.github.io/2024/08/18/%E9%A2%98%E8%A7%A3%EF%BC%9AAT-abc367-d-ABC367D-Pedometer/">更好的阅读体验？</a></p>
 <h2 id="翻译">翻译</h2>
-<p>一个有方向的环按顺序有 <span
-class="math inline">\(1,2,3,\dots,N\)</span>，其中 <span
-class="math inline">\(N\)</span> 与 <span
-class="math inline">\(1\)</span> 相连，并 <span
-class="math inline">\(N\)</span> 的下一个是 <span
-class="math inline">\(1\)</span>。求出此环中数对 <span
-class="math inline">\((i,j)\)</span> 满足 <span
-class="math inline">\(i\)</span> 走到 <span
-class="math inline">\(j\)</span> 的最近距离为 <span
-class="math inline">\(M\)</span> 的倍数的个数。</p>
-<p><strong>注意，我们只能沿环的方向走。比如能直接从 <span
-class="math inline">\(1\)</span> 走到 <span
-class="math inline">\(2\)</span>，而不能直接从 <span
-class="math inline">\(2\)</span> 走到 <span
-class="math inline">\(1\)</span>。若走完环的另半侧，那么那个距离不是最近的。</strong></p>
+<p><img
+src="https://pic.imgdb.cn/item/66c325c9d9c307b7e903ee01.png" /></p>
+<p>注意：一定是顺时针走。</p>
 <h2 id="正文">正文</h2>
 <p>记 <span class="math inline">\(i,j\)</span> 的距离为 <span
 class="math inline">\(d(i,j)\)</span></p>
@@ -381,14 +371,14 @@ class="math inline">\(d(i,j)\)</span></p>
 class="math inline">\(\dfrac{d(i,j)}{M}\)</span>，二分查找满足条件的点。</p>
 <p>显然过不了，其瓶颈在于倍数的枚举。</p>
 <p>不妨破环，记数组 <span class="math inline">\(a\)</span> 为 <span
-class="math inline">\(a_1,a_2,\dots,a_{2N-1}\)</span>。</p>
+class="math inline">\(a_1,a_2,\dots,a_{2N-1}\)</span>，且使用前缀和。</p>
 <p>事实上，<span class="math inline">\(d(i,j) \equiv 0 (\bmod \
 M)\)</span> 的充要条件是 <span
 class="math inline">\(\sum\limits^{i}_{k=1}a_k\equiv
 \sum\limits^{j}_{k=1}a_k(\bmod \ M)\)</span>。</p>
 <p>故对所有前缀和对 <span class="math inline">\(M\)</span>
 取模，若模相同，则满足题目要求。</p>
-<p>但是考虑到本题解题目翻译中重点标注的内容，我们统计是只从前往后看的。换句话说就是，前面的只会看后面的，不会再往前看。这里的前后指的是下标的大小。</p>
+<p>但是考虑到一定是顺时针走，我们统计是只从前往后看的。换句话说就是，前面的只会看后面的，不会再往前看。这里的前后指的是下标的大小。</p>
 <p>具体的，现有点 <span class="math inline">\(i,j\)</span>。<strong>要从
 <span class="math inline">\(i\)</span> 走到 <span
 class="math inline">\(j\)</span></strong>。</p>
@@ -409,6 +399,8 @@ class="math inline">\(M\)</span> 取模的余数一定小于 <span
 class="math inline">\(M\)</span>。</p>
 <p>代码：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i,l,r) for(int i=(l);i&lt;=(r);i++)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">2e5</span>+<span class="number">23</span>;</span><br><span class="line"><span class="type">int</span> n,m;</span><br><span class="line"><span class="type">int</span> a[<span class="number">2</span>*N],sum[<span class="number">2</span>*N];</span><br><span class="line">unordered_map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; cnt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> ONLINE_JUDGE</span></span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;in.in&quot;</span>,<span class="string">&quot;r&quot;</span>,stdin);</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;out.out&quot;</span>,<span class="string">&quot;w&quot;</span>,stdout);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="built_in">rep</span>(i,<span class="number">1</span>,n) cin&gt;&gt;sum[i],sum[i+n]=sum[i];</span><br><span class="line">    <span class="built_in">rep</span>(i,<span class="number">1</span>,<span class="number">2</span>*n) sum[i]+=sum[i<span class="number">-1</span>],sum[i]%=m;</span><br><span class="line">    <span class="built_in">rep</span>(i,<span class="number">1</span>,n) cnt[sum[i]]++;  </span><br><span class="line">    ll ans=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i,<span class="number">1</span>,n)</span><br><span class="line">    &#123;</span><br><span class="line">        cnt[sum[i]]--; <span class="comment">// 弃用</span></span><br><span class="line">        ans+=cnt[sum[i]]; <span class="comment">// 统计</span></span><br><span class="line">        cnt[sum[i+n]]++; <span class="comment">// 启用</span></span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc367/submissions/56867512">AC
+记录</a></p>
 <h2 id="总结">总结</h2>
 <p>我觉得这个放在 D 虽然代码不长，但是有一定难度的。</p>
 <p>参考资料：</p>
