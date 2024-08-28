@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"mahaoming2022.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="最后 60 天 之前的日志  NOIP&#x2F;提高组题单 https:&#x2F;&#x2F;atcoder.jp ABC ABC 题 https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;problem&#x2F;list?type&#x3D;AT&amp;keyword&#x3D;ABC&amp;orderBy&#x3D;pid&amp;order&#x3D;asc&amp;page&#x3D;1 latest https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;pro">
+    <meta name="description" content="最后 60 天 每天晚上 23:00 左右更新，其实就是下线前更新。 缺省源： 1234567891011121314151617181920212223242526&#x2F;&#x2F; Written by da_ke&#x2F;&#x2F; Website: https:&#x2F;&#x2F;mahaoming2022.github.io#include &lt;bits&#x2F;stdc++.h&gt;#define i64 long long#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="The last 60 days">
 <meta property="og:url" content="http://mahaoming2022.github.io/2024/08/25/The-last-60-days/index.html">
 <meta property="og:site_name" content="Mahaoming">
-<meta property="og:description" content="最后 60 天 之前的日志  NOIP&#x2F;提高组题单 https:&#x2F;&#x2F;atcoder.jp ABC ABC 题 https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;problem&#x2F;list?type&#x3D;AT&amp;keyword&#x3D;ABC&amp;orderBy&#x3D;pid&amp;order&#x3D;asc&amp;page&#x3D;1 latest https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;pro">
+<meta property="og:description" content="最后 60 天 每天晚上 23:00 左右更新，其实就是下线前更新。 缺省源： 1234567891011121314151617181920212223242526&#x2F;&#x2F; Written by da_ke&#x2F;&#x2F; Website: https:&#x2F;&#x2F;mahaoming2022.github.io#include &lt;bits&#x2F;stdc++.h&gt;#define i64 long long#">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-08-25T02:47:31.000Z">
-<meta property="article:modified_time" content="2024-08-28T10:41:40.058Z">
+<meta property="article:modified_time" content="2024-08-28T10:50:45.307Z">
 <meta property="article:author" content="Ma Haoming">
 <meta property="article:tag" content="OI">
 <meta property="article:tag" content="CSP">
@@ -216,7 +216,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-08-28 18:41:40" itemprop="dateModified" datetime="2024-08-28T18:41:40+08:00">2024-08-28</time>
+      <time title="Modified: 2024-08-28 18:50:45" itemprop="dateModified" datetime="2024-08-28T18:50:45+08:00">2024-08-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -238,28 +238,22 @@
     
     
     <div class="post-body" itemprop="articleBody"><h1 id="最后-60-天">最后 60 天</h1>
+<p>每天晚上 23:00 左右更新，其实就是下线前更新。</p>
+<p>缺省源：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Written by da_ke</span></span><br><span class="line"><span class="comment">// Website: https://mahaoming2022.github.io</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> i64 long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i,l,r) for(int i=(l);i&lt;=(r);i++)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> fdn(i,r,l) for(int i=(r);i&gt;=(l);i--)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int,int&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> db;</span><br><span class="line"><span class="keyword">typedef</span> __int128 i128;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> ONLINE_JUDGE</span></span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;in.in&quot;</span>,<span class="string">&quot;r&quot;</span>,stdin);</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;out.out&quot;</span>,<span class="string">&quot;w&quot;</span>,stdout);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);cout.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// hope to debug successfully</span></span><br></pre></td></tr></table></figure>
 <h2 id="之前的日志">之前的日志</h2>
 <ul>
-<li><p><a
-target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/list?tag=83,342,347&amp;page=4">NOIP/提高组题单</a></p></li>
-<li><p><a target="_blank" rel="noopener" href="https://atcoder.jp" class="uri">https://atcoder.jp</a>
-ABC</p></li>
-<li><p>ABC 题 <a
+<li><a
+target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/list?tag=83,342,347&amp;page=4">NOIP/提高组题单</a></li>
+<li>ABC题 <a
 target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/list?type=AT&amp;keyword=ABC&amp;orderBy=pid&amp;order=asc&amp;page=1"
-class="uri">https://www.luogu.com.cn/problem/list?type=AT&amp;keyword=ABC&amp;orderBy=pid&amp;order=asc&amp;page=1</a></p></li>
-<li><p>latest <a
+class="uri">https://www.luogu.com.cn/problem/list?type=AT&amp;keyword=ABC&amp;orderBy=pid&amp;order=asc&amp;page=1</a></li>
+<li>latest <a
 target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/list?type=AT&amp;keyword=ABC&amp;orderBy=pid&amp;order=asc&amp;page=42"
-class="uri">https://www.luogu.com.cn/problem/list?type=AT&amp;keyword=ABC&amp;orderBy=pid&amp;order=asc&amp;page=42</a></p></li>
-<li><p><a
+class="uri">https://www.luogu.com.cn/problem/list?type=AT&amp;keyword=ABC&amp;orderBy=pid&amp;order=asc&amp;page=42</a></li>
+<li><a
 target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/list?type=AT&amp;keyword=ABC&amp;orderBy=pid&amp;order=asc&amp;page=30"
-class="uri">https://www.luogu.com.cn/problem/list?type=AT&amp;keyword=ABC&amp;orderBy=pid&amp;order=asc&amp;page=30</a></p></li>
-<li><p>数学家：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/article/6zp1kn9h"
-class="uri">https://www.luogu.com.cn/article/6zp1kn9h</a></p></li>
-<li><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/paste/nxlyzwdq"
-class="uri">https://www.luogu.com.cn/paste/nxlyzwdq</a></p></li>
-<li><p><a target="_blank" rel="noopener" href="https://www.luogu.com/paste/ra1jv0bm"
-class="uri">https://www.luogu.com/paste/ra1jv0bm</a> MasonXu 's
-games</p></li>
+class="uri">https://www.luogu.com.cn/problem/list?type=AT&amp;keyword=ABC&amp;orderBy=pid&amp;order=asc&amp;page=30</a></li>
 </ul>
 <p>undo:</p>
 <ul>
@@ -272,35 +266,35 @@ class="uri">https://www.luogu.com.cn/problem/AT_abc278_e</a></li>
 </ul>
 <p>todo:</p>
 <ul>
-<li><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/AT_abc257_f"
-class="uri">https://www.luogu.com.cn/problem/AT_abc257_f</a></p></li>
-<li><p>CSP-S 2020 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7076"
-class="uri">https://www.luogu.com.cn/problem/P7076</a></p></li>
-<li><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/AT_abc258_g"
-class="uri">https://www.luogu.com.cn/problem/AT_abc258_g</a></p></li>
-<li><p>大模拟·鸭棋 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5380"
-class="uri">https://www.luogu.com.cn/problem/P5380</a></p></li>
-<li><p>贪心<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P10569"
-class="uri">https://www.luogu.com.cn/problem/P10569</a></p></li>
-<li><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/AT_abc260_e"
-class="uri">https://www.luogu.com.cn/problem/AT_abc260_e</a></p></li>
-<li><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/AT_abc261_f"
-class="uri">https://www.luogu.com.cn/problem/AT_abc261_f</a></p></li>
-<li><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/AT_abc264_f"
-class="uri">https://www.luogu.com.cn/problem/AT_abc264_f</a></p></li>
-<li><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/AT_abc265_e"
-class="uri">https://www.luogu.com.cn/problem/AT_abc265_e</a></p></li>
-<li><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/solution/AT_abc267_e"
-class="uri">https://www.luogu.com.cn/problem/solution/AT_abc267_e</a></p></li>
-<li><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/AT_abc271_e"
-class="uri">https://www.luogu.com.cn/problem/AT_abc271_e</a></p></li>
-<li><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/AT_abc188_f"
-class="uri">https://www.luogu.com.cn/problem/AT_abc188_f</a></p></li>
-<li><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1879"
-class="uri">https://www.luogu.com.cn/problem/P1879</a></p></li>
+<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/AT_abc257_f"
+class="uri">https://www.luogu.com.cn/problem/AT_abc257_f</a></li>
+<li>CSP-S 2020 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7076"
+class="uri">https://www.luogu.com.cn/problem/P7076</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/AT_abc258_g"
+class="uri">https://www.luogu.com.cn/problem/AT_abc258_g</a></li>
+<li>大模拟·鸭棋 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5380"
+class="uri">https://www.luogu.com.cn/problem/P5380</a></li>
+<li>贪心<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P10569"
+class="uri">https://www.luogu.com.cn/problem/P10569</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/AT_abc260_e"
+class="uri">https://www.luogu.com.cn/problem/AT_abc260_e</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/AT_abc261_f"
+class="uri">https://www.luogu.com.cn/problem/AT_abc261_f</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/AT_abc264_f"
+class="uri">https://www.luogu.com.cn/problem/AT_abc264_f</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/AT_abc265_e"
+class="uri">https://www.luogu.com.cn/problem/AT_abc265_e</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/solution/AT_abc267_e"
+class="uri">https://www.luogu.com.cn/problem/solution/AT_abc267_e</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/AT_abc271_e"
+class="uri">https://www.luogu.com.cn/problem/AT_abc271_e</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/AT_abc188_f"
+class="uri">https://www.luogu.com.cn/problem/AT_abc188_f</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1879"
+class="uri">https://www.luogu.com.cn/problem/P1879</a></li>
 </ul>
 <blockquote>
-<p>么嘛，我想要留下美好的回忆有什么错！在自己消失之前，心怀上不像消失的愿望，希望让某个人记住我，希望留下羁绊。我这么希望着，又有什么不可以吗！——珂朵莉</p>
+<p>什么嘛，我想要留下美好的回忆有什么错！在自己消失之前，心怀上不像消失的愿望，希望让某个人记住我，希望留下羁绊。我这么希望着，又有什么不可以吗！——珂朵莉</p>
 </blockquote>
 <p>最后 60 天，不管好坏都得退役了。也就是，CSP 结束的那一刻，可以和我说
 GoodBye 了。</p>
@@ -365,7 +359,7 @@ class="uri">https://www.luogu.com.cn/problem/AT_abc280_e</a></p>
 <p>Zelotz 列为 Special Thanks。</p>
 <p>随后 A 了。</p>
 <p>写点闲话，我跟 cq_zry 什么关系。</p>
-<p>实际上，我们初始的日子就是 WOT 的生日。当时，cq_zry
+<p>实际上，我们认识的日子就是 WOT 的生日。当时，cq_zry
 回答了我的一个帖子，使得我关注他。然后我向他宣团，就是现在的
 WOT，他加入了。</p>
 <p>第二天，他问我团队里 【Wuhu 2002】飞行棋
@@ -381,8 +375,8 @@ dp。我也喜欢用记忆化搜索，直到今天也在用。</p>
 <p>那个暑假发生了很多事。后来因为著名的联合公开赛，cq_zry
 被封了，从此我跟他很长一段时间没有交往，后来 WOT 也解散了。</p>
 <p>这是后来我重建 WOT 的时候，我去再次邀请他，他竟然出乎意料的回到了
-WOT。</p>
-<p>后来我<del>又拜他为师</del>，他耐心地带我调了很多代码。</p>
+WOT</p>
+<p>后来我<del>又拜他为师</del>，他耐心地帮我调了很多代码。</p>
 <p>其实 cq_zry
 一直是我心目中最巨的大佬，不仅仅是因为他的学术水平强悍……</p>
 <h1 id="special-thanks">Special Thanks</h1>
