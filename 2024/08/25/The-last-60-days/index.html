@@ -27,7 +27,7 @@
 <meta property="og:description" content="最后 60 天 每天晚上 23:00 左右更新，其实就是下线前更新。 缺省源： 1234567891011121314151617181920212223242526&#x2F;&#x2F; Written by da_ke&#x2F;&#x2F; Website: https:&#x2F;&#x2F;mahaoming2022.github.io#include &lt;bits&#x2F;stdc++.h&gt;#define i64 long long#">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-08-25T02:47:31.000Z">
-<meta property="article:modified_time" content="2024-08-28T10:50:45.307Z">
+<meta property="article:modified_time" content="2024-08-28T14:43:10.394Z">
 <meta property="article:author" content="Ma Haoming">
 <meta property="article:tag" content="OI">
 <meta property="article:tag" content="CSP">
@@ -216,7 +216,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-08-28 18:50:45" itemprop="dateModified" datetime="2024-08-28T18:50:45+08:00">2024-08-28</time>
+      <time title="Modified: 2024-08-28 22:43:10" itemprop="dateModified" datetime="2024-08-28T22:43:10+08:00">2024-08-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -336,7 +336,7 @@ class="math inline">\(1\)</span>，那么不用管他。</li>
 <p>【有关 MO】【OI
 无关】：其实组合数学是有必要先囫囵吞枣的，但很多人认为没意义。</p>
 <p>狂补作业ing，damn 读书记录，各种 sb 表。</p>
-<p>没控制住，跟 lzm 玩到 20:00。</p>
+<p>没控制住，跟 lzm,cff 玩你画我猜到 20:00。</p>
 <p>D，分解质因数，有公式：</p>
 <p>对于 <span class="math inline">\(k\)</span> 的因子 <span
 class="math inline">\(p\)</span>，<span
@@ -354,11 +354,21 @@ class="uri">https://www.luogu.com.cn/problem/AT_abc280_e</a></p>
 <p>我觉得有点像背包，写出来看假不假。</p>
 <p>然后写废了，没调。</p>
 <h1 id="day-3-20240828">Day 3 / 20240828</h1>
+<p>【OI 无关】贴一道组合数徐：</p>
+<p>甲乙两人从 <span class="math inline">\(1,2,4,\cdots,2^{2024}\)</span>
+选数，甲先选。每选一个数，就将其减 <span
+class="math inline">\(1\)</span>。如果哪个人操作后有负数，此人告负。问：谁必胜？</p>
+<p>答案：甲必胜。原因：搞不懂。来源：《小蓝本》第 7 本，第 4 章习题
+8。</p>
+<p>大佬会的私信我。</p>
 <p>感谢 Zelotz 的耐心查看，发现 <code>1LL&lt;&lt;59</code> 写成
 <code>1LL&lt;59</code>，警钟长鸣。</p>
 <p>Zelotz 列为 Special Thanks。</p>
 <p>随后 A 了。</p>
 <p>写点闲话，我跟 cq_zry 什么关系。</p>
+<p>这里 cq_zry 现在是 <span class="citation"
+data-cites="CQ_Bob">@CQ_Bob</span> &amp; <span class="citation"
+data-cites="harmis_yz">@harmis_yz</span>。</p>
 <p>实际上，我们认识的日子就是 WOT 的生日。当时，cq_zry
 回答了我的一个帖子，使得我关注他。然后我向他宣团，就是现在的
 WOT，他加入了。</p>
@@ -372,19 +382,93 @@ WOT，他加入了。</p>
 dp。我也喜欢用记忆化搜索，直到今天也在用。</p>
 <p>在我们努力下，我们又出了五一赛（T1 模拟，T2 贪心，T3 忘了 T4 随机 T5
 数位 dp T6 卡常背包）</p>
-<p>那个暑假发生了很多事。后来因为著名的联合公开赛，cq_zry
-被封了，从此我跟他很长一段时间没有交往，后来 WOT 也解散了。</p>
+<p>那个暑假发生了很多事。后来因为著名的<a
+target="_blank" rel="noopener" href="https://www.luogu.com.cn/discuss/657803">联合公开赛</a>，cq_zry
+被封了（被小 L 盗号导致的），从此我跟他很长一段时间没有交往，后来 WOT
+也解散了。</p>
 <p>这是后来我重建 WOT 的时候，我去再次邀请他，他竟然出乎意料的回到了
 WOT</p>
 <p>后来我<del>又拜他为师</del>，他耐心地帮我调了很多代码。</p>
 <p>其实 cq_zry
 一直是我心目中最巨的大佬，不仅仅是因为他的学术水平强悍……</p>
+<p>这里搞笑放一段 cq_zry 写的：</p>
+<blockquote>
+<p>YT:
+也许曾经喜欢过，但已不存在了。那时的我们，一起笑过，哭过，陪过。和妳一起的时光很短，分别的时光很长。就像一场龙卷风，在不经意的瞬间，卷走了妳，和我。分开的时候，是迷茫的，是沉默的。我好像并没有感情，又好像，只是没有说出来。就这样我们在那不知意的情况下，默默地、慢慢地分别。在梦里，在脑海里，在心里，都牵挂着妳。多少次莫名地心酸，多少次悄悄地哭泣，不知道，终是为何。是雨天，是晴雨天，是看不见的雨天。它倾盆地毫无保留地泼下来，淋湿了我，毫无遮挡的脸庞……</p>
+</blockquote>
+<blockquote>
+<p>Bye,if you remember me...</p>
+</blockquote>
+<blockquote>
+<p>cq_zry</p>
+</blockquote>
+<blockquote>
+<p>2023.2.10</p>
+</blockquote>
+<p>这里祝 <span class="citation" data-cites="cq_zry">@cq_zry</span> NOI
+Au。</p>
+<p>言归正传，19:00 准时开始做题，不准颓废！</p>
+<p>存一道题：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/AT_abc281_e"
+class="uri">https://www.luogu.com.cn/problem/AT_abc281_e</a></p>
+<p>ABC282 B 竟然橙 orz。看了一会儿，很简单，没写。</p>
+<p>C 红，orz。随便写一下。</p>
+<p>很好写的模拟题，19:18 写好了。</p>
+<p>D 绿，orz。二分图？我还没学过呢！</p>
+<p><a target="_blank" rel="noopener" href="https://oi-wiki.org" class="uri">https://oi-wiki.org</a>
+：节点集合由两个集合组成，且两个集合内部没有边的图，称为二分图。</p>
+<p>呃这个，还是看不懂。Thus，题解！</p>
+<p>虽然但是用 DeepL：</p>
+<blockquote>
+<p>什么是二分图？当且仅当我们可以将每个顶点涂成黑色或白色以满足以下条件时，一个无向图被称为二分图。</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>没有边连接涂成相同颜色的顶点。</li>
+</ul>
+</blockquote>
+<p>这场 ABC 是不是 shaber 场？要是我参加肯定掉大分。我是唐诗。</p>
+<p>运用<del>组合数学</del>中染色的思想，我们将图而染色（不妨黑白）。</p>
+<p>若一条<strong>还没有添加的边</strong>，满足两边颜色不同，可加。</p>
+<p>枚举每个连通块，记黑白分别为 <span
+class="math inline">\(c_0,c_1\)</span>，根据乘法原理共 <span
+class="math inline">\(c_0c_1\)</span>，同时也可以和别的连通块中的点连，故
+<span class="math inline">\(c_0c_1+(c_0+c_1)(N-c_0-c_1)/2\)</span></p>
+<p>最后减去连边即可。</p>
+<p>写了但是：<a
+target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc282/submissions/57205175"
+class="uri">https://atcoder.jp/contests/abc282/submissions/57205175</a></p>
+<p>检查公式，发现加减写错，sb。</p>
+<p>话说这样例也不能水这种程度？</p>
+<p>然后又 WA：<a
+target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc282/submissions/57205323"
+class="uri">https://atcoder.jp/contests/abc282/submissions/57205323</a></p>
+<p>先不调了，去切 Water 场。</p>
+<p>ABC283 保卫战！</p>
+<p>C，第一眼
+dp，数据范围爆了。马上贪心，正确！但是即使这么简单也不妨碍我 sb 交了<a
+target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc283/submissions?f.Task=&amp;f.LanguageName=&amp;f.Status=&amp;f.User=da_ke">很多次</a>。</p>
+<p>D，只有橙吗？晕了，我竟然不太会。但是括号层数记一下，被标记层数记一下就做完了吧。由于字母只有
+<span class="math inline">\(26\)</span> 个故该条件应该是突破点。</p>
+<p>更：ABC282D 开 long long，少错 2 个点。感谢 <span class="citation"
+data-cites="baibaieee">@baibaieee</span></p>
+<p>水了犇，放松了一下，同时也获得了前面组合题的证明。感谢 <span
+class="citation" data-cites="Ravener">@Ravener</span>。</p>
+<p>回来写题。大雾，为啥初值
+<code>x=1</code>。A：原因是为访问过与第一层访问是有区别的。</p>
+<p>E，是 dp 吗，数据这么诡异，不大不小。就算是也不会，太菜。</p>
+<p>题解。</p>
+<p>大概看了一下，是 dp，但暴力程度无法想象qwq。wssb。</p>
+<p>可能丢一半明天写。</p>
 <h1 id="special-thanks">Special Thanks</h1>
 <ul>
-<li><p><a
+<li><p>@<a
 target="_blank" rel="noopener" href="https://atcoder.jp/users/harmis_yz">harmis_yz</a>，洛谷同。</p></li>
-<li><p><a
+<li><p>@<a
 target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/347589">Zelotz</a></p></li>
+<li><p>@<a
+target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/536362">baibaieee</a></p></li>
+<li><p>@<a
+target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/956382">Ravener</a></p></li>
 </ul>
 
     </div>
