@@ -341,7 +341,7 @@ src="https://bkimg.cdn.bcebos.com/pic/dc54564e9258d109b3de51446e11dbbf6c81810ae7
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-08-28 22:54:30" itemprop="dateModified" datetime="2024-08-28T22:54:30+08:00">2024-08-28</time>
+      <time title="Modified: 2024-08-29 20:19:31" itemprop="dateModified" datetime="2024-08-29T20:19:31+08:00">2024-08-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -425,10 +425,10 @@ class="uri">https://www.luogu.com.cn/problem/P1879</a></li>
 <p>最后 60 天，不管好坏都得退役了。也就是，CSP 结束的那一刻，可以和我说
 GoodBye 了。</p>
 <p>但是即使这样，我也想拼尽全力，不留遗憾。</p>
-<h1 id="day-0-20240825">Day 0 / 20240825</h1>
+<h2 id="day-0-20240825">Day 0 / 20240825</h2>
 <p>其实呃呃呃。</p>
 <p>今天颓了，跟小学生完了你画我猜，水了一黄就下了。</p>
-<h1 id="day-1-20240826">Day 1 / 20240826</h1>
+<h2 id="day-1-20240826">Day 1 / 20240826</h2>
 <p>MO 自然是小蓝本。组合数学难，但有规律可循。</p>
 <p>很不幸的是我过敏了，原因未知。手极度的酸，连代码都打不动。</p>
 <p>下面说说晚上。</p>
@@ -458,7 +458,7 @@ class="math inline">\(1\)</span>，那么不用管他。</li>
 <code>vector</code>。</p>
 <p>这个 abc280 C 太简单了，秒。</p>
 <p>D 会，但是分解质因数应该有的。</p>
-<h1 id="day-2-20240827">Day 2 / 20240827</h1>
+<h2 id="day-2-20240827">Day 2 / 20240827</h2>
 <p>【有关 MO】【OI
 无关】：其实组合数学是有必要先囫囵吞枣的，但很多人认为没意义。</p>
 <p>狂补作业ing，damn 读书记录，各种 sb 表。</p>
@@ -479,7 +479,7 @@ class="uri">https://www.luogu.com.cn/problem/AT_abc280_e</a></p>
 <p>题解怎么比我想的复杂！！</p>
 <p>我觉得有点像背包，写出来看假不假。</p>
 <p>然后写废了，没调。</p>
-<h1 id="day-3-20240828">Day 3 / 20240828</h1>
+<h2 id="day-3-20240828">Day 3 / 20240828</h2>
 <p>【OI 无关】贴一道组合数徐：</p>
 <p>甲乙两人从 <span class="math inline">\(1,2,4,\cdots,2^{2024}\)</span>
 选数，甲先选。每选一个数，就将其减 <span
@@ -585,7 +585,118 @@ class="citation" data-cites="Ravener">@Ravener</span>。</p>
 <p>题解。</p>
 <p>大概看了一下，是 dp，但暴力程度无法想象qwq。wssb。</p>
 <p>可能丢一半明天写。</p>
-<h1 id="special-thanks">Special Thanks</h1>
+<h2 id="day-4-20240829">Day 4 /20240829</h2>
+<p>快开学了，先把 sb 表口胡了，还剩一个三结合，明天胡。</p>
+<p>MO 颓了，悟净没颓。写点运动笔记</p>
+<h3 id="高一物理运动">【高一物理】运动</h3>
+<p>先定义标量：只有大小而没有方向的量；矢量（数学中译作向量）：既有大小又有方向的量。</p>
+<ul>
+<li>路程：质点通过的<strong>长度</strong>之和。符号：<span
+class="math inline">\(s\)</span>，是标量。</li>
+<li>位移：质点运动前后位置的变化。符号：<span
+class="math inline">\(x\)</span>，是矢量。</li>
+</ul>
+<p>举例：如一物体沿 <span class="math inline">\((x-1)^2+y^2=1\)</span>
+这个圆走，从 <span class="math inline">\((0,0)\)</span> 沿圆周走大 <span
+class="math inline">\((2,0)\)</span>。其路程为 <span
+class="math inline">\(\pi\)</span>，位移为 <span
+class="math inline">\((2,0)\)</span>。这里用向量的方式表示矢量。</p>
+<ul>
+<li><p>时刻：时间的节点。符号 <span
+class="math inline">\(t\)</span>，是标量。</p></li>
+<li><p>时间：两个时刻之间的部分（通俗）。符号：<span
+class="math inline">\(\Delta t\)</span>，有时也即 <span
+class="math inline">\(t\)</span>，是标量。</p></li>
+<li><p>速度：符号为 <span class="math inline">\(v\)</span>，<span
+class="math inline">\(v=\dfrac{\Delta x}{\Delta
+t}\)</span>，是矢量。方向与位移方向一致。</p></li>
+<li><p>速率：瞬间速度。符号 <span
+class="math inline">\(v\)</span>，矢量。</p></li>
+<li><p>加速度：匀变速直线运动中，速度-时间函数的<strong>斜率</strong>。</p></li>
+</ul>
+<p>下面介绍这些的关系：</p>
+<p>记时间为 <span class="math inline">\(t\)</span>，开始速度为 <span
+class="math inline">\(v_0\)</span>，加速度为 <span
+class="math inline">\(a\)</span>。</p>
+<ul>
+<li><p><span class="math inline">\(v=v_0+at\)</span></p></li>
+<li><p>位移的大小是速度-时间函数图像下方面积（通俗的讲是：开始时间的垂线、停止时间的垂线，函数图像，坐标系横轴所围成的面积）。</p></li>
+</ul>
+<p>证明：这里记函数为 <span class="math inline">\(f(x)\)</span>
+将函数曲线分割成<strong>无限小</strong>长方形。每个长方形在横坐标轴上，其在横坐标轴上的边长为
+<span class="math inline">\(\mathrm{d}x\)</span>，其面积为 <span
+class="math inline">\(f(x)\mathrm{d}x\)</span>，就是表示的是这个瞬间通过的位移大小。</p>
+<p>由上面的结论我们可以推出一个推论：</p>
+<ul>
+<li><span
+class="math inline">\(x=v_0t+at^2\)</span>。面积公式可证。</li>
+</ul>
+<p>如果我们用 <span class="math inline">\(v\)</span>
+表示结束时的速度，那么又有：</p>
+<ul>
+<li><span
+class="math inline">\(v^2-v_0^2=2ax\)</span>。由上式变换可得。</li>
+</ul>
+<p>下面介绍函数关系：</p>
+<p>由公式 <span class="math inline">\(x=v_0t+at^2\)</span> 和 <span
+class="math inline">\(v=v_0+at\)</span>，很难不发现，<span
+class="math inline">\(v=x&#39;\)</span>。</p>
+<p>实际上，速度的变化实际上就是位移的瞬间变化率，这符合导函数的定义。</p>
+<p>实际上，速度-时间函数是位移-时间函数的导函数，加速度-时间函数是速度-时间函数的导函数。</p>
+<p>下面介绍考法：</p>
+<p>实际上，各种问题，我们都可以将 <span
+class="math inline">\(v-t\)</span> 图像转为 <span
+class="math inline">\(x-t\)</span>
+图像（积分）。这样我们就可以解决各种考题。</p>
+<p>本人初学，有错私信。</p>
+<hr />
+<p>写笔记写到 19:30，准备开始 OI。</p>
+<p>今天可能需要补一些前面的题。</p>
+<hr />
+<p>一上，<a target="_blank" rel="noopener" href="https://lglg.top/913738"
+class="uri">https://lglg.top/913738</a>
+这个也能违规，这是人吗？！你谷现在 xxs
+泛滥，天天讨论低质量内容，怎么来板块漂移就是
+btd？？你谷真的是蒸蒸日上啊！</p>
+<p>你谷 xxs tm
+真可怕！我真的服了。其实我现在基本不用讨论区了，真的跟小学生对线对怕了！他们一个个号称比我强几百倍！说我
+CTJ，说我菜，说我是 xxs。真的好想笑啊。其实你谷绿名是菜，xxs
+很多都是绿名，但绿名只是是 xxs
+的必要条件！不是充要条件！实际上也不是必要条件，因为橙名也有小学生。所以很多人看到我都以为是那种
+xxs，都不看我主页都跟我对线，引战。</p>
+<p>其实真正的大佬不是你们这些伪大佬的姿态的。可怕。xxs
+一般具有几个特征：</p>
+<ul>
+<li><p>主页冗长，含有滥用 <span class="math inline">\(\LaTeX\)</span>
+的垃圾内容、传送带图片、火柴人图片、你谷笑梗、游戏、iostream=100、各种打油诗等等垃圾内容。而大佬的主页都是什么
+AtC Rating，CF Rating 之类的。</p></li>
+<li><p>小学生你跟他说 ABC 都不知道是啥。他们没有 AT，CF。</p></li>
+<li><p>小学生可以随便在求助帖里发诸如「666」「你调不出来就睡觉」之类的劝退的语气。</p></li>
+</ul>
+<p>主要还是看主页。正如一位蓝勾巨佬跟我说的：主页就可以准确的看出一个人的年龄。</p>
+<hr />
+<p>致远星了，看了 kkk 发的帖，sb，6 h
+老铁，那我题目总版岂不是直接沉海！你谷讨论区密度小，而神贴密度比他更小，<strong>但学术帖密度很大</strong>，这是因为他又知识！！！那些
+xxs 帖你觉得他又什么意义吗？这不是鼓励发水贴吗？</p>
+<p>我去 LOJ
+捞了（？），其实我是很反对各种规定的。实际上规定并不能约束人的思想。洛谷不是明明规定不能抄题解不还有人吗？他们难道不知道没有这条规定吗？这简直就是谬论！</p>
+<p>惩罚实际上是一种比较低级的约束方式。虽然但是，LOJ
+没有严格的规定也没有小学生嘛！</p>
+<p>要么就严格要求。像 Codeforces，你去发个 qp
+都不行。这强迫我们讨论学术内容。然而现在学术贴 1
+年都没有一条回复，这是洛谷的初衷吗？？？！！</p>
+<p>如今小学生泛滥的洛谷我觉得是无可救药了，自从 xht
+搞毛，小粉兔休假以后就是密度一天比一天小，让知识都埋没在深处了。</p>
+<p>我觉得用浮力比喻洛谷是正确的。密度越小代表越水，越低下。小粉兔说：我怎么在这么
+sb 的网站当管理员。是有原因的。</p>
+<p>如果你认为我说的不对，别喷。只会喷人的人不是好人。</p>
+<p>虽然但是如果你发帖缅怀李政道都是违规的，但是我看看管理员有没有胆量把他删了。</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/discuss/880769"
+class="uri">https://www.luogu.com.cn/discuss/880769</a></p>
+<p>我觉得那些风纪志愿者也得停停停了，洛谷现状无法挽回。</p>
+<hr />
+<p>开始看题了，边写边写点日记</p>
+<h2 id="special-thanks">Special Thanks</h2>
 <ul>
 <li><p>@<a
 target="_blank" rel="noopener" href="https://atcoder.jp/users/harmis_yz">harmis_yz</a>，洛谷同。</p></li>
@@ -596,6 +707,198 @@ target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/536362">baiba
 <li><p>@<a
 target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/956382">Ravener</a></p></li>
 </ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://mahaoming2022.github.io/2024/08/25/%E9%A2%98%E8%A7%A3%EF%BC%9AABC368C-Triple-Attack/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/./images/avatar.png">
+      <meta itemprop="name" content="Ma Haoming">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mahaoming">
+      <meta itemprop="description" content="Mahaoming's home page">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Mahaoming">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/08/25/%E9%A2%98%E8%A7%A3%EF%BC%9AABC368C-Triple-Attack/" class="post-title-link" itemprop="url">题解：ABC368C Triple Attack</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-08-25 10:50:18" itemprop="dateCreated datePublished" datetime="2024-08-25T10:50:18+08:00">2024-08-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-08-29 19:05:27" itemprop="dateModified" datetime="2024-08-29T19:05:27+08:00">2024-08-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">题解</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="前言">前言</h2>
+<p>最难的 C。我的思路也很另类。</p>
+<blockquote>
+<p>Stop learning other useless algorithms,go to solve problems,and learn
+how to use binary search. by Um_nik.</p>
+</blockquote>
+<h2 id="翻译">翻译</h2>
+<p>现在，有 <span class="math inline">\(N\)</span>
+个敌人的按顺序排成一行，记他们的生命值为：<span
+class="math inline">\(a_1,a_2,\dots,a_N\)</span>，你有一个初始为 <span
+class="math inline">\(0\)</span> 的量 <span
+class="math inline">\(T\)</span>。</p>
+<p>不断进行如下操作：</p>
+<p>记目前最前面的敌人生命值为 <span
+class="math inline">\(a_i\)</span>，满足 <span
+class="math inline">\(\forall j\in [1,i),a_j&lt;1\)</span>。</p>
+<ul>
+<li>若 <span class="math inline">\(T\equiv 0 (\bmod\ 3)\)</span>，让
+<span class="math inline">\(a_i\)</span> 减 <span
+class="math inline">\(3\)</span>。</li>
+<li>否则，让 <span class="math inline">\(a_i\)</span> 减 <span
+class="math inline">\(1\)</span>。</li>
+</ul>
+<p>求让所有敌人生命值不大于 <span class="math inline">\(0\)</span>
+的最小操作次数。</p>
+<h2 id="思路">思路</h2>
+<p>暴力的方法的复杂度依赖于 <span class="math inline">\(\max a\)</span>
+的大小，是因为因为这种方法不断去枚举 <span
+class="math inline">\(T\)</span> 导致的。</p>
+<p>其实枚举 <span class="math inline">\(T\)</span>
+是没必要的，因为很多操作是<strong>重复的</strong>。其实复杂度的瓶颈就是在于有些
+<span class="math inline">\(a_i\)</span> 很大，你不断减 <span
+class="math inline">\(1\)</span> 很浪费时间。</p>
+<p>所以可以在枚举 <span class="math inline">\(i\in
+[1,n]\)</span>，考虑将每个敌人「杀死」，这么做是 <span
+class="math inline">\(O(n)\)</span>
+的。但是个人觉得代码不太好写，我使用的是二分。</p>
+<p>由于 <span class="math inline">\(T\)</span> 可以很大，事实上 <span
+class="math inline">\(T\in [1,(\max a) \times
+N]\)</span>，考虑如下：</p>
+<p>若存在一个最小的操作次数 <span
+class="math inline">\(T_{min}\)</span>。则定 <span
+class="math inline">\(\forall T&gt;T_{min}\)</span>，这些 <span
+class="math inline">\(T\)</span> 都多做了一些操作；<span
+class="math inline">\(\forall T&lt;T_{min}\)</span>，这些 <span
+class="math inline">\(T\)</span> 都无法杀死所有敌人。</p>
+<p>显然这道题符合二分的定义。</p>
+<p>二分方法如下（会的直接跳过）</p>
+<p>定义区间 <span class="math inline">\([L,R]\)</span>
+为查找区间，查找目的为 <span class="math inline">\(L+1=R\)</span>。</p>
+<ul>
+<li>如果 <span
+class="math inline">\(M=\frac{L+R}{2}\)</span>，不足以杀死所有敌人，<span
+class="math inline">\(T_{min}\in(M,R]\)</span>。</li>
+<li>如果 <span
+class="math inline">\(M=\frac{L+R}{2}\)</span>，能杀死所有敌人，<strong>是</strong>或不是最小次数（包含是最小次数的），<span
+class="math inline">\(T_{min}\in[L,M]\)</span>。</li>
+</ul>
+<p>判断是否杀死的方法：</p>
+<p>定义 <span class="math inline">\(x\)</span> 为当前消耗的 <span
+class="math inline">\(T\)</span> 值。</p>
+<p>对于 <span class="math inline">\(i\in [1,n]\)</span>，记 <span
+class="math inline">\(y=a_i\)</span>。</p>
+<ul>
+<li>定义 <span class="math inline">\(m=3-(x \bmod 3)\)</span>
+<ul>
+<li><p>如果 <span class="math inline">\(y&lt;m\)</span>，令 <span
+class="math inline">\(x\)</span> 为 <span
+class="math inline">\(x+y\)</span>。</p></li>
+<li><p>如果 <span class="math inline">\(y\ge m\)</span>，令 <span
+class="math inline">\(y\)</span> 为 <span
+class="math inline">\(y-m-2\)</span>，<span
+class="math inline">\(x\)</span> 为 <span
+class="math inline">\(x+m\)</span>。这里为了更好描述敌人的损耗。这是若
+<span class="math inline">\(y\ge 0\)</span>，则 <span
+class="math inline">\(i\)</span> 已经死了。否则：设每轮 <span
+class="math inline">\(3\)</span> 此共 <span
+class="math inline">\(5\)</span> 伤害值的轮数 <span
+class="math inline">\(r=\lfloor\frac{x}{5}\rfloor\)</span>，计算出 <span
+class="math inline">\(y\)</span> 经过 <span
+class="math inline">\(r\)</span> 轮伤害后的 <span
+class="math inline">\(y_1\)</span>，同时更新 <span
+class="math inline">\(x\)</span>。</p>
+<ul>
+<li>如果 <span class="math inline">\(y_1\in \{1,2\}\)</span>，则 <span
+class="math inline">\(x\)</span> 增加 <span
+class="math inline">\(y_1\)</span>。</li>
+<li>否则，<span class="math inline">\(x\)</span> 增加 <span
+class="math inline">\(3\)</span>。</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>具体思想是循环问题，每 <span class="math inline">\(5\)</span>
+个伤害为一轮，可仔细体会。</p>
+<p>运用上面的方法，判断 <span class="math inline">\(i\)</span>
+次后是否满足 <span class="math inline">\(x\leq T\)</span> 即可。</p>
+<p>以上就是数学的描述，下面就是代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// #define EXT</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">ifdef</span> EXT</span></span><br><span class="line">    <span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/extc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//define</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> i64 long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i,l,r) for(int i=(l);i&lt;=(r);i++)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> fdn(i,r,l) for(int i=(r);i&gt;=(l);i--)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int,int&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// type define</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> db;</span><br><span class="line"><span class="keyword">typedef</span> __int128 i128;</span><br><span class="line"><span class="meta">#<span class="keyword">ifdef</span> EXT</span></span><br><span class="line">    <span class="keyword">typedef</span> <span class="type">unsigned</span> <span class="type">int</span> ui;</span><br><span class="line">    <span class="keyword">typedef</span> <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> ull;</span><br><span class="line">    <span class="keyword">typedef</span> <span class="type">long</span> <span class="type">double</span> ldb;</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// const integer</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> INF=<span class="number">1</span>&lt;&lt;<span class="number">29</span>;</span><br><span class="line"><span class="type">const</span> ll INFL=<span class="number">1ll</span>&lt;<span class="number">59</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">2e5</span>+<span class="number">3</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line">ll a[N],sum[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">check</span><span class="params">(ll t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll x=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i,<span class="number">1</span>,n)</span><br><span class="line">    &#123;</span><br><span class="line">        ll m=<span class="number">3</span>-x%<span class="number">3</span>;</span><br><span class="line">        ll y=a[i];</span><br><span class="line">        <span class="keyword">if</span>(y&lt;m) x+=y;</span><br><span class="line">        <span class="keyword">if</span>(y&gt;=m)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// remaining : 3</span></span><br><span class="line">            <span class="comment">// x=0,1,2,3 m=3</span></span><br><span class="line">            y=y-m<span class="number">-2</span>,x+=m;</span><br><span class="line">            <span class="keyword">if</span>(y&lt;=<span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="comment">// remaining : 7</span></span><br><span class="line">            <span class="comment">// x=0,1,2,3 m=3</span></span><br><span class="line">            <span class="comment">// y=2;</span></span><br><span class="line">            ll r=y/<span class="number">5</span>;x+=<span class="number">3</span>*r;</span><br><span class="line">            ll r0=y<span class="number">-5</span>*r;</span><br><span class="line">            <span class="keyword">if</span>(r0&lt;=<span class="number">2</span>) x+=r0;</span><br><span class="line">            <span class="keyword">else</span> x+=<span class="number">3</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> x&lt;=t;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> ONLINE_JUDGE</span></span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;in.in&quot;</span>,<span class="string">&quot;r&quot;</span>,stdin);</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;out.out&quot;</span>,<span class="string">&quot;w&quot;</span>,stdout);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);cout.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="built_in">rep</span>(i,<span class="number">1</span>,n) cin&gt;&gt;a[i],sum[i]=sum[i<span class="number">-1</span>]+a[i];</span><br><span class="line">    ll l=<span class="number">0</span>,r=N*<span class="number">1e9</span>+<span class="number">23</span>;</span><br><span class="line">    <span class="keyword">while</span>(l+<span class="number">1</span>&lt;r)</span><br><span class="line">    &#123;</span><br><span class="line">        ll mid=l+((r-l)&gt;&gt;<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">check</span>(mid))</span><br><span class="line">            r=mid;</span><br><span class="line">        <span class="keyword">else</span> l=mid;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;r;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>代码中穿插了我写代码是举的例子，可仔细体会。</p>
+<h2 id="总结">总结</h2>
+<p>我觉得这次很难。</p>
+<p>广告：安利一下我的代码仓库。AtCoder
+的部分题目代码即调试信息、避坑可以在<a
+target="_blank" rel="noopener" href="https://kkgithub.com/mahaoming2022/lib/tree/main/ATCoder">这里</a>找到。</p>
 
       
     </div>
@@ -1530,192 +1833,6 @@ TV的视频.wc!都觉得简单是吧.我不禁大骂:小心乐极生悲!(我们�
 <p>后来,zyz都393就我最差是吧??qwq</p>
 <p>没事没事,这次数学英语发挥稳定,语文略有失误.况且这次对题海很友好.qwq</p>
 <p>达克.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://mahaoming2022.github.io/2024/08/25/%E9%A2%98%E8%A7%A3%EF%BC%9AABC368C-Triple-Attack/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/./images/avatar.png">
-      <meta itemprop="name" content="Ma Haoming">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Mahaoming">
-      <meta itemprop="description" content="Mahaoming's home page">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Mahaoming">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/08/25/%E9%A2%98%E8%A7%A3%EF%BC%9AABC368C-Triple-Attack/" class="post-title-link" itemprop="url">题解：ABC368C Triple Attack</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2024-08-25 10:50:18 / Modified: 11:29:21" itemprop="dateCreated datePublished" datetime="2024-08-25T10:50:18+08:00">2024-08-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/OI/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">题解</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="前言">前言</h2>
-<p>最难的 C。我的思路也很另类。</p>
-<blockquote>
-<p>Stop learning other useless algorithms,go to solve problems,and learn
-how to use binary search. by Um_nik.</p>
-</blockquote>
-<h2 id="翻译">翻译</h2>
-<p>现在，有 <span class="math inline">\(N\)</span>
-个敌人的按顺序排成一行，记他们的生命值为：<span
-class="math inline">\(a_1,a_2,\dots,a_N\)</span>，你有一个初始为 <span
-class="math inline">\(0\)</span> 的量 <span
-class="math inline">\(T\)</span>。</p>
-<p>不断进行如下操作：</p>
-<p>记目前最前面的敌人生命值为 <span
-class="math inline">\(a_i\)</span>，满足 <span
-class="math inline">\(\forall j\in [1,i),a_j&lt;1\)</span>。</p>
-<ul>
-<li>若 <span class="math inline">\(T\equiv 0 (\bmod\ 3)\)</span>，让
-<span class="math inline">\(a_i\)</span> 减 <span
-class="math inline">\(3\)</span>。</li>
-<li>否则，让 <span class="math inline">\(a_i\)</span> 减 <span
-class="math inline">\(1\)</span>。</li>
-</ul>
-<p>求让所有敌人生命值不大于 <span class="math inline">\(0\)</span>
-的最小操作次数。</p>
-<h2 id="思路">思路</h2>
-<p>暴力的方法的复杂度依赖于 <span class="math inline">\(\max a\)</span>
-的大小，是因为因为这种方法不断去枚举 <span
-class="math inline">\(T\)</span> 导致的。</p>
-<p>其实枚举 <span class="math inline">\(T\)</span>
-是没必要的，因为很多操作是<strong>重复的</strong>。其实复杂度的瓶颈就是在于有些
-<span class="math inline">\(a_i\)</span> 很大，你不断减 <span
-class="math inline">\(1\)</span> 很浪费时间。</p>
-<p>所以可以在枚举 <span class="math inline">\(i\in
-[1,n]\)</span>，考虑将每个敌人「杀死」，这么做是 <span
-class="math inline">\(O(n)\)</span>
-的。但是个人觉得代码不太好写，我使用的是二分。</p>
-<p>由于 <span class="math inline">\(T\)</span> 可以很大，事实上 <span
-class="math inline">\(T\in [1,(\max a) \times
-N]\)</span>，考虑如下：</p>
-<p>若存在一个最小的操作次数 <span
-class="math inline">\(T_{min}\)</span>。则定 <span
-class="math inline">\(\forall T&gt;T_{min}\)</span>，这些 <span
-class="math inline">\(T\)</span> 都多做了一些操作；<span
-class="math inline">\(\forall T&lt;T_{min}\)</span>，这些 <span
-class="math inline">\(T\)</span> 都无法杀死所有敌人。</p>
-<p>显然这道题符合二分的定义。</p>
-<p>二分方法如下（会的直接跳过）</p>
-<p>定义区间 <span class="math inline">\([L,R]\)</span>
-为查找区间，查找目的为 <span class="math inline">\(L+1=R\)</span>。</p>
-<ul>
-<li>如果 <span
-class="math inline">\(M=\frac{L+R}{2}\)</span>，不足以杀死所有敌人，<span
-class="math inline">\(T_{min}\in(M,R]\)</span>。</li>
-<li>如果 <span
-class="math inline">\(M=\frac{L+R}{2}\)</span>，能杀死所有敌人，<strong>是</strong>或不是最小次数（包含是最小次数的），<span
-class="math inline">\(T_{min}\in[L,M]\)</span>。</li>
-</ul>
-<p>判断是否杀死的方法：</p>
-<p>定义 <span class="math inline">\(x\)</span> 为当前消耗的 <span
-class="math inline">\(T\)</span> 值。</p>
-<p>对于 <span class="math inline">\(i\in [1,n]\)</span>，记 <span
-class="math inline">\(y=a_i\)</span>。</p>
-<ul>
-<li>定义 <span class="math inline">\(m=3-(x \bmod 3)\)</span>
-<ul>
-<li><p>如果 <span class="math inline">\(y&lt;m\)</span>，令 <span
-class="math inline">\(x\)</span> 为 <span
-class="math inline">\(x+y\)</span>。</p></li>
-<li><p>如果 <span class="math inline">\(y\ge m\)</span>，令 <span
-class="math inline">\(y\)</span> 为 <span
-class="math inline">\(y-m-2\)</span>，<span
-class="math inline">\(x\)</span> 为 <span
-class="math inline">\(x+m\)</span>。这里为了更好描述敌人的损耗。这是若
-<span class="math inline">\(y\ge 0\)</span>，则 <span
-class="math inline">\(i\)</span> 已经死了。否则：设每轮 <span
-class="math inline">\(3\)</span> 此共 <span
-class="math inline">\(5\)</span> 伤害值的轮数 <span
-class="math inline">\(r=\lfloor\frac{x}{5}\rfloor\)</span>，计算出 <span
-class="math inline">\(y\)</span> 经过 <span
-class="math inline">\(r\)</span> 轮伤害后的 <span
-class="math inline">\(y_1\)</span>，同时更新 <span
-class="math inline">\(x\)</span>。</p>
-<ul>
-<li>如果 <span class="math inline">\(y_1\in \{1,2\}\)</span>，则 <span
-class="math inline">\(x\)</span> 增加 <span
-class="math inline">\(y_1\)</span>。</li>
-<li>否则，<span class="math inline">\(x\)</span> 增加 <span
-class="math inline">\(3\)</span>。</li>
-</ul></li>
-</ul></li>
-</ul>
-<p>具体思想是循环问题，每 <span class="math inline">\(5\)</span>
-个伤害为一轮，可仔细体会。</p>
-<p>运用上面的方法，判断 <span class="math inline">\(i\)</span>
-次后是否满足 <span class="math inline">\(x\leq T\)</span> 即可。</p>
-<p>以上就是数学的描述，下面就是代码：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// #define EXT</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">ifdef</span> EXT</span></span><br><span class="line">    <span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/extc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//define</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> i64 long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i,l,r) for(int i=(l);i&lt;=(r);i++)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> fdn(i,r,l) for(int i=(r);i&gt;=(l);i--)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int,int&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// type define</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> db;</span><br><span class="line"><span class="keyword">typedef</span> __int128 i128;</span><br><span class="line"><span class="meta">#<span class="keyword">ifdef</span> EXT</span></span><br><span class="line">    <span class="keyword">typedef</span> <span class="type">unsigned</span> <span class="type">int</span> ui;</span><br><span class="line">    <span class="keyword">typedef</span> <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> ull;</span><br><span class="line">    <span class="keyword">typedef</span> <span class="type">long</span> <span class="type">double</span> ldb;</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// const integer</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> INF=<span class="number">1</span>&lt;&lt;<span class="number">29</span>;</span><br><span class="line"><span class="type">const</span> ll INFL=<span class="number">1ll</span>&lt;<span class="number">59</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">2e5</span>+<span class="number">3</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line">ll a[N],sum[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">check</span><span class="params">(ll t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll x=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i,<span class="number">1</span>,n)</span><br><span class="line">    &#123;</span><br><span class="line">        ll m=<span class="number">3</span>-x%<span class="number">3</span>;</span><br><span class="line">        ll y=a[i];</span><br><span class="line">        <span class="keyword">if</span>(y&lt;m) x+=y;</span><br><span class="line">        <span class="keyword">if</span>(y&gt;=m)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// remaining : 3</span></span><br><span class="line">            <span class="comment">// x=0,1,2,3 m=3</span></span><br><span class="line">            y=y-m<span class="number">-2</span>,x+=m;</span><br><span class="line">            <span class="keyword">if</span>(y&lt;=<span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="comment">// remaining : 7</span></span><br><span class="line">            <span class="comment">// x=0,1,2,3 m=3</span></span><br><span class="line">            <span class="comment">// y=2;</span></span><br><span class="line">            ll r=y/<span class="number">5</span>;x+=<span class="number">3</span>*r;</span><br><span class="line">            ll r0=y<span class="number">-5</span>*r;</span><br><span class="line">            <span class="keyword">if</span>(r0&lt;=<span class="number">2</span>) x+=r0;</span><br><span class="line">            <span class="keyword">else</span> x+=<span class="number">3</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> x&lt;=t;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> ONLINE_JUDGE</span></span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;in.in&quot;</span>,<span class="string">&quot;r&quot;</span>,stdin);</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;out.out&quot;</span>,<span class="string">&quot;w&quot;</span>,stdout);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);cout.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="built_in">rep</span>(i,<span class="number">1</span>,n) cin&gt;&gt;a[i],sum[i]=sum[i<span class="number">-1</span>]+a[i];</span><br><span class="line">    ll l=<span class="number">0</span>,r=N*<span class="number">1e9</span>+<span class="number">23</span>;</span><br><span class="line">    <span class="keyword">while</span>(l+<span class="number">1</span>&lt;r)</span><br><span class="line">    &#123;</span><br><span class="line">        ll mid=l+((r-l)&gt;&gt;<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">check</span>(mid))</span><br><span class="line">            r=mid;</span><br><span class="line">        <span class="keyword">else</span> l=mid;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;r;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>代码中穿插了我写代码是举的例子，可仔细体会。</p>
-<h2 id="总结">总结</h2>
-<p>我觉得这次很难。</p>
-<p>广告：安利一下我的代码仓库。AtCoder
-的部分题目代码即调试信息、避坑可以在<a
-target="_blank" rel="noopener" href="https://kkgithub.com/mahaoming2022/lib/tree/main/ATCoder">这里</a>找到。</p>
 
       
     </div>
