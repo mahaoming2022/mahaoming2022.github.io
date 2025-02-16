@@ -128,7 +128,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -316,6 +316,159 @@ TV的视频.wc!都觉得简单是吧.我不禁大骂:小心乐极生悲!(我们�
 <p>后来,zyz都393就我最差是吧??qwq</p>
 <p>没事没事,这次数学英语发挥稳定,语文略有失误.况且这次对题海很友好.qwq</p>
 <p>达克.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://mahaoming2022.github.io/2025/02/16/abc393%E9%A2%98%E8%A7%A3%E9%9B%86%E5%90%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/./images/avatar.png">
+      <meta itemprop="name" content="Ma Haoming">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mahaoming">
+      <meta itemprop="description" content="Mahaoming's home page">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Mahaoming">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/02/16/abc393%E9%A2%98%E8%A7%A3%E9%9B%86%E5%90%88/" class="post-title-link" itemprop="url">abc393题解集合</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2025-02-16 11:31:03 / Modified: 11:33:47" itemprop="dateCreated datePublished" datetime="2025-02-16T11:31:03+08:00">2025-02-16</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>文章同载于：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/article/37bpa0ho"
+class="uri">https://www.luogu.com.cn/article/37bpa0ho</a></li>
+<li><a target="_blank" rel="noopener" href="https://lgfriends.us.kg/blog/205-abc-393-ti-jie-zheng-he"
+class="uri">https://lgfriends.us.kg/blog/205-abc-393-ti-jie-zheng-he</a></li>
+</ul>
+<blockquote>
+<p>fyy 是一个非常珂愛的女孩子。</p>
+<p>fyy 认为一个 <span class="math inline">\(01\)</span> 序列中如果所有
+<span class="math inline">\(1\)</span>
+都是连续的，那么这个序列很珂愛。fyy
+想通过有限次操作使得一个序列变得珂愛。对于每次操作，她只能交换两个相邻的数。</p>
+<p>fyy 问妳最少的操作次数是多少？</p>
+</blockquote>
+<blockquote>
+<p>讲一下一个假的做法。看到这个题立马想到 ABC 以前的一道题，把所有的
+<span class="math inline">\(1\)</span>
+都往最左边的一个移动。错误很显然。</p>
+</blockquote>
+<p>这个问题很<strong>迷惑</strong>，实际上所有 <span
+class="math inline">\(0\)</span> 都是没用的，只需考虑 <span
+class="math inline">\(1\)</span>。</p>
+<p>钦定最优情况一定是选择一个 <span class="math inline">\(1\)</span>
+作为合并的起始点，将其两边的 <span class="math inline">\(1\)</span>
+逐渐合并。</p>
+<p>形式化的说，序列中给出了 <span class="math inline">\(M\)</span> 个
+<span class="math inline">\(1\)</span>，其中第 <span
+class="math inline">\(i\)</span> 个 <span
+class="math inline">\(1\)</span> 的位置是 <span
+class="math inline">\(X_i\)</span>。选定一个第 <span
+class="math inline">\(k\)</span> 个 <span
+class="math inline">\(1\)</span>，它左边有 <span
+class="math inline">\(l_k\)</span> 个 <span
+class="math inline">\(1\)</span>，右边有 <span
+class="math inline">\(r_k\)</span> 个 <span
+class="math inline">\(1\)</span>。所以 <span
+class="math inline">\(l_k+r_k=M-1\)</span>，<span
+class="math inline">\(k=l_k+1\)</span>。</p>
+<p>求 <span class="math inline">\(\sum\limits_{i=1}^{l_k}
+\left[X_k-X_i-1-(k-i-1)\right]+\sum \limits_{i=l_k+2}^{M}
+\left[X_i-X_k-1-(i-k-1)\right]\)</span>
+的最小值（其实上式也可写成绝对值，读者自己写）。</p>
+<blockquote>
+<p>不妨考虑一个子问题。给定 <span class="math inline">\(M\)</span>
+个数轴上的点 <span
+class="math inline">\((X_1,X_2,\dots,X_M)\)</span>。设 <span
+class="math inline">\(x\)</span> 为任意一点。求 <span
+class="math inline">\(\sum\limits_{i\in[1,M]}|x-X_i|\)</span>
+的最小值。运用几何直观，显然当且仅当 <span
+class="math inline">\(x\)</span>
+在中间两点所成区间（包含区间断点）内时取得最小值（如果 <span
+class="math inline">\(M\)</span> 为奇数那么 <span
+class="math inline">\(x=X_{mid}\)</span>，<span
+class="math inline">\(mid\)</span> 为 <span class="math inline">\(1\sim
+M\)</span> 的中间值 <span class="math inline">\(\left\lfloor
+\dfrac{M}{2}\right\rfloor+1\)</span>）。</p>
+<p>对此的证明可以翻开你的人教版七年级第一章有理数的各种教辅资料，应该都有这种题目。</p>
+</blockquote>
+<p>类似于刚才的问题，我们注意到所有 <span
+class="math inline">\(\left|k-i\right|-1\)</span>
+最后的和应当为<strong>定值</strong>（这个读者自己求出）。这意味着我们所要求的就是刚才的子问题。</p>
+<p>事实上，再假设最优情况不是选择一个 <span
+class="math inline">\(1\)</span>，而是 <span
+class="math inline">\(0\)</span> 作为中间点。发现和选择 <span
+class="math inline">\(1\)</span> 最后的结果是相等的，这说明选择 <span
+class="math inline">\(1\)</span> 和选择 <span
+class="math inline">\(0\)</span>
+都是有可能最优的。这和刚才子问题的结论相符合！</p>
+<p>于是我们解决了这个问题。下面形式化做法：</p>
+<ul>
+<li>找出所有点 <span
+class="math inline">\((X_1,X_2,\dots,X_M)\)</span>，找出中间点为合并初始点，也就是
+<span class="math inline">\(X_{\left\lfloor
+\frac{M}{2}\right\rfloor+1}\)</span>。这个点记为 <span
+class="math inline">\(X_{mid}\)</span>。</li>
+<li>求出 <span class="math inline">\(\sum\limits_{i=1}^{mid}
+\left[X_{mid}-X_i-(k-i)\right]+\sum \limits_{i=mid+1}^{M}
+\left[X_i-X_{mid}-(i-k)\right]\)</span> 的值。</li>
+</ul>
+<p>下面是代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> N; string S;</span><br><span class="line">    cin&gt;&gt;N&gt;&gt;S;</span><br><span class="line">    S=<span class="string">&#x27; &#x27;</span>+S;</span><br><span class="line">    <span class="type">int</span> mid,M=<span class="number">0</span>,cnt=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i,<span class="number">1</span>,N)</span><br><span class="line">        <span class="keyword">if</span>(S[i]==<span class="string">&#x27;1&#x27;</span>) M++;</span><br><span class="line">    <span class="built_in">rep</span>(i,<span class="number">1</span>,N)</span><br><span class="line">        <span class="keyword">if</span>(S[i]==<span class="string">&#x27;1&#x27;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            cnt++;</span><br><span class="line">            <span class="keyword">if</span>(cnt==M/<span class="number">2</span>+<span class="number">1</span>)&#123;mid=i; <span class="keyword">break</span>;&#125;</span><br><span class="line">        &#125;</span><br><span class="line">    M=M/<span class="number">2</span>+<span class="number">1</span>;</span><br><span class="line">    ll ans=<span class="number">0</span>; cnt=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">rep</span>(i,<span class="number">1</span>,mid<span class="number">-1</span>)</span><br><span class="line">        <span class="keyword">if</span>(S[i]==<span class="string">&#x27;1&#x27;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            cnt++;</span><br><span class="line">            ans+=mid-i<span class="number">-1</span>;</span><br><span class="line">            ans-=(M-cnt<span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    cnt=M;</span><br><span class="line">    <span class="built_in">rep</span>(i,mid+<span class="number">1</span>,N)</span><br><span class="line">        <span class="keyword">if</span>(S[i]==<span class="string">&#x27;1&#x27;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            cnt++;</span><br><span class="line">            ans+=i-mid<span class="number">-1</span>;</span><br><span class="line">            ans-=(cnt-M<span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    cout&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 路虽远行则将至，事虽难做则必成。</span></span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc393/submissions/62799606"
+class="uri">https://atcoder.jp/contests/abc393/submissions/62799606</a></p>
 
       
     </div>
