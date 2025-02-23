@@ -128,18 +128,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -164,6 +164,249 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://mahaoming2022.github.io/2024/08/05/AT-abc364-e-ABC364E-Maximum-Glutton/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/./images/avatar.png">
+      <meta itemprop="name" content="Ma Haoming">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mahaoming">
+      <meta itemprop="description" content="Mahaoming's home page">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Mahaoming">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/08/05/AT-abc364-e-ABC364E-Maximum-Glutton/" class="post-title-link" itemprop="url">AT_abc364_e [ABC364E] Maximum Glutton</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-08-05 18:56:13" itemprop="dateCreated datePublished" datetime="2024-08-05T18:56:13+08:00">2024-08-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-08-09 18:52:41" itemprop="dateModified" datetime="2024-08-09T18:52:41+08:00">2024-08-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/dp/" itemprop="url" rel="index"><span itemprop="name">dp</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="前情">前情</h2>
+<p>当场没做 D 来做 E 是明智的，D 根本想不到的。</p>
+<h2 id="题目">题目</h2>
+<p>翻译一下：</p>
+<blockquote>
+<p>高桥准备 <span class="math inline">\(n\)</span>
+个菜，每个菜肴有甜味值 <span class="math inline">\(a_i\)</span> 和
+咸味值 <span
+class="math inline">\(b_i\)</span>。高桥可以按任意顺序排放这些菜肴。Snuke
+按排放的顺序吃，当吃的总甜味值大于 <span
+class="math inline">\(X\)</span>
+<strong>或</strong>总咸味值<strong>大于</strong> <span
+class="math inline">\(Y\)</span> 时停止。求吃的菜肴总数的最大值。</p>
+</blockquote>
+<h2 id="思路">思路</h2>
+<h3 id="step-1">Step 1</h3>
+<p>这道题和 C 题如出一辙，但仔细一看发现未必。这题求的是最大值。</p>
+<p>数据范围是 <span class="math inline">\(n\le 80\)</span> 且 <span
+class="math inline">\(X,Y\le 1000\)</span> 显然 dp。</p>
+<blockquote>
+<p>对比 P2240 和 P1048，发现其实和分别这次 C 题和 E 题道理相同。</p>
+</blockquote>
+<p>一眼类似于背包的 dp，不难设计状态转移：</p>
+<p><span
+class="math inline">\(dp(i,x,y)=\max\{dp(i+1,x,y),1+dp(i+1,x-a_i,y-b_i)\}\)</span>。</p>
+<p>其中 <span class="math inline">\(i\)</span> 表示考虑了前 <span
+class="math inline">\(i\)</span> 个菜肴，<span
+class="math inline">\(x,y\)</span>
+分别表示能承受的甜味、咸味值还剩余多少，<span
+class="math inline">\(t\)</span> 表示已经选了 <span
+class="math inline">\(t\)</span> 个菜肴。</p>
+<p>事实上，<span class="math inline">\(x\)</span> 确定了 <span
+class="math inline">\(y\)</span> 就确定了，故记忆化时忽略 <span
+class="math inline">\(y\)</span>。否则空间肯定开不下。代码中的
+<code>cnt</code> 是为了方便编写，实则不必计入状态。</p>
+<p>同时不难写出类似于这样的代码（读者别急着写类似于这样的代码）：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 赛时代码</span></span><br><span class="line"><span class="comment">// #define EXT</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">ifdef</span> EXT</span></span><br><span class="line">    <span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/extc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> i64 long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i,l,r) for(int i=(l);i&lt;=(r);i++)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> fdn(i,r,l) for(int i=(r);i&gt;=(l);i--)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int,int&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> db;</span><br><span class="line"><span class="keyword">typedef</span> __int128 i128;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> INF=<span class="number">1</span>&lt;&lt;<span class="number">29</span>;</span><br><span class="line"><span class="type">const</span> ll INFL=<span class="number">1ll</span>&lt;<span class="number">59</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">114</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> M=<span class="number">10024</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,x,y;</span><br><span class="line"><span class="type">int</span> a[N],b[N];</span><br><span class="line"><span class="type">int</span> mem[N][M][N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">dp</span><span class="params">(<span class="type">int</span> d,<span class="type">int</span> xx,<span class="type">int</span> yy,<span class="type">int</span> cnt)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(xx&lt;<span class="number">0</span>||yy&lt;<span class="number">0</span>) <span class="keyword">return</span> cnt;</span><br><span class="line">    <span class="keyword">if</span>(d==n+<span class="number">1</span>) <span class="keyword">return</span> cnt;</span><br><span class="line">    <span class="type">int</span>&amp; ans=mem[d][xx][cnt];</span><br><span class="line">    <span class="keyword">if</span>(ans!=<span class="number">-1</span>) <span class="keyword">return</span> ans;</span><br><span class="line">    <span class="type">int</span> ans0=<span class="number">0</span>,ans1=<span class="number">0</span>;</span><br><span class="line">    ans0=<span class="built_in">dp</span>(d+<span class="number">1</span>,xx-a[d],yy-b[d],cnt+<span class="number">1</span>);</span><br><span class="line">    ans1=<span class="built_in">dp</span>(d+<span class="number">1</span>,xx,yy,cnt);</span><br><span class="line">    <span class="keyword">return</span> ans=<span class="built_in">max</span>(ans0,ans1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> ONLINE_JUDGE</span></span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;in.in&quot;</span>,<span class="string">&quot;r&quot;</span>,stdin);</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;in.out&quot;</span>,<span class="string">&quot;w&quot;</span>,stdout);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);cout.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">    <span class="built_in">memset</span>(mem,<span class="number">-1</span>,<span class="built_in">sizeof</span>(mem));</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;x&gt;&gt;y;</span><br><span class="line">    <span class="built_in">rep</span>(i,<span class="number">1</span>,n) cin&gt;&gt;a[i]&gt;&gt;b[i];</span><br><span class="line">    cout&lt;&lt;<span class="built_in">dp</span>(<span class="number">1</span>,x,y,<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>同：<a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc364/submissions/56045157"
+class="uri">https://atcoder.jp/contests/abc364/submissions/56045157</a></p>
+<p>很可惜，这样的思路是有漏洞的！</p>
+<h2 id="step-2">Step 2</h2>
+<p>比赛的时候碰到这种情况一定冷静！</p>
+<p>显然，该程序并未考虑顺序问题。</p>
+<p>0-1 背包中物体选的顺序是不考虑的。但题目中特别说了：</p>
+<blockquote>
+<p><strong>高桥可以按任意顺序排放这些菜肴。</strong></p>
+</blockquote>
+<p>反例：不妨只考虑甜味值，假设咸味值远远还没有达到极限。假设选的菜肴中有一个菜的甜味值为
+<span
+class="math inline">\(p\)</span>，另一个<strong>在它之前</strong>的菜肴甜味值为
+<span
+class="math inline">\(q\)</span>。假设除去这两个菜肴以外已经选了甜味值
+<span class="math inline">\(m\)</span>，且 <span
+class="math inline">\(m+p+q&gt;m+q&gt;X&gt;m+p&gt;m\)</span>。</p>
+<p>按照我们之前的方案，最大的甜味值被认为是 <span
+class="math inline">\(m+q\)</span>。然而将 <span
+class="math inline">\(p\)</span> 和 <span
+class="math inline">\(q\)</span> 交换就得到最大甜味值 <span
+class="math inline">\(m+p+q\)</span>，所以最大的菜肴数也比原来多 <span
+class="math inline">\(1\)</span>，故原方法有漏洞。</p>
+<p>很容易想到用排序法修复 Bug。</p>
+<h2 id="step-3">Step 3</h2>
+<p>这是我们将咸味值加进来。我们不妨只考虑其中两个临项 <span
+class="math inline">\(i\)</span> 和 <span
+class="math inline">\(i+1\)</span> 的情况。列表得：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">项（菜）</th>
+<th style="text-align: center;">已选甜味</th>
+<th style="text-align: center;">已选咸味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span
+class="math inline">\([1,i)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(x\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(y\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span
+class="math inline">\(i\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(x+a_i\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(y+b_i\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span
+class="math inline">\(i+1\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(x+a_i+a_{i+1}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(y+b_i+b_{i+1}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>反之：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">项（菜）</th>
+<th style="text-align: center;">已选甜味</th>
+<th style="text-align: center;">已选咸味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span
+class="math inline">\([1,i)\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(x\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(y\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span
+class="math inline">\(i\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(x+a_{i+1}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(y+b_{i+1}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span
+class="math inline">\(i+1\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(x+a_i+a_{i+1}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(y+b_i+b_{i+1}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>若 <span class="math inline">\(x+a_{i+1}&gt;X&gt;x+a_{i}\)</span> 且
+<span class="math inline">\(y+b_{i+1}&gt;Y&gt;y+b_{i}\)</span>
+这时一定有 <span
+class="math inline">\(a_{i+1}+b_{i+1}&gt;a_{i}+b_{i}\)</span>。也就是说，符合条件的满足：<span
+class="math inline">\(a_{i+1}+b_{i+1}&gt;a_{i}+b_{i}\)</span>。那我们可以将
+<span class="math inline">\(a_i+b_i\)</span> 从小到大排序。</p>
+<p>补充：不妨考虑满足 <span
+class="math inline">\(x+a_{i+1}&gt;X&gt;x+a_{i}\)</span> 但不满足 <span
+class="math inline">\(y+b_{i+1}&gt;Y&gt;y+b_{i}\)</span>，这时交换后会出现和交换前一样的现象。</p>
+<p>在基础上改一下就可以得到：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 赛时代码修改</span></span><br><span class="line"><span class="comment">// #define EXT</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">ifdef</span> EXT</span></span><br><span class="line">    <span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/extc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> i64 long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i,l,r) for(int i=(l);i&lt;=(r);i++)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> fdn(i,r,l) for(int i=(r);i&gt;=(l);i--)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pii pair<span class="string">&lt;int,int&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> db;</span><br><span class="line"><span class="keyword">typedef</span> __int128 i128;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> INF=<span class="number">1</span>&lt;&lt;<span class="number">29</span>;</span><br><span class="line"><span class="type">const</span> ll INFL=<span class="number">1ll</span>&lt;<span class="number">59</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">114</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> M=<span class="number">10024</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,x,y;</span><br><span class="line">vector&lt;pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; &gt; s;</span><br><span class="line"><span class="type">int</span> a[N],b[N];</span><br><span class="line"><span class="type">int</span> mem[N][M][N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">cmp2</span><span class="params">(pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; A,pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; B)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> A.second+A.first&lt;B.first+B.second;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">dp</span><span class="params">(<span class="type">int</span> d,<span class="type">int</span> xx,<span class="type">int</span> yy,<span class="type">int</span> cnt)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(d==n+<span class="number">1</span>) <span class="keyword">return</span> cnt;</span><br><span class="line">    <span class="type">int</span>&amp; ans=mem[d][xx][cnt];</span><br><span class="line">    <span class="keyword">if</span>(ans!=<span class="number">-1</span>) <span class="keyword">return</span> ans;</span><br><span class="line">    <span class="type">int</span> ans0=<span class="number">0</span>,ans1=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(xx&gt;=a[d]&amp;&amp;yy&gt;=b[d]) ans0=<span class="built_in">dp</span>(d+<span class="number">1</span>,xx-a[d],yy-b[d],cnt+<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">else</span> ans0=cnt+<span class="number">1</span>;</span><br><span class="line">    ans1=<span class="built_in">dp</span>(d+<span class="number">1</span>,xx,yy,cnt);</span><br><span class="line">    <span class="keyword">return</span> ans=<span class="built_in">max</span>(ans0,ans1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> ONLINE_JUDGE</span></span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;in.in&quot;</span>,<span class="string">&quot;r&quot;</span>,stdin);</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;in.out&quot;</span>,<span class="string">&quot;w&quot;</span>,stdout);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);cout.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">    <span class="built_in">memset</span>(mem,<span class="number">-1</span>,<span class="built_in">sizeof</span>(mem));</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;x&gt;&gt;y;</span><br><span class="line">    <span class="built_in">rep</span>(i,<span class="number">1</span>,n)&#123;<span class="type">int</span> ai,bi;cin&gt;&gt;ai&gt;&gt;bi;s.<span class="built_in">push_back</span>(&#123;ai,bi&#125;);&#125;</span><br><span class="line">    <span class="built_in">sort</span>(s.<span class="built_in">begin</span>(),s.<span class="built_in">end</span>(),cmp2);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;s.<span class="built_in">size</span>();++i) a[i+<span class="number">1</span>]=s[i].first,b[i+<span class="number">1</span>]=s[i].second;</span><br><span class="line">    <span class="type">int</span> ans=<span class="built_in">dp</span>(<span class="number">1</span>,x,y,<span class="number">0</span>);</span><br><span class="line">    cout&lt;&lt;ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>代码中 <code>mem</code> 数组中 <code>cnt</code>
+的维度同样可以略去不计。</p>
+<h2 id="总结">总结</h2>
+<p>当场肯定不能像写题解一样考虑，一般来说是用直觉做的（也有一眼看穿证明的）。</p>
+<p>这个思路阶梯是我当场<a
+target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc364/submissions/me?f.Task=abc364_e&amp;f.LanguageName=&amp;f.Status=&amp;f.User=">真实体验</a>。所以希望大家考虑全面。</p>
+<p><strong>但是本题解给出的方法只是思考的时候用的，并不是证明</strong>。有疑问或证明欢迎评论！</p>
+<p>难度评级：绿或蓝。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -372,7 +615,24 @@ TV的视频.wc!都觉得简单是吧.我不禁大骂:小心乐极生悲!(我们�
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2025-02-16 11:31:03 / Modified: 11:33:47" itemprop="dateCreated datePublished" datetime="2025-02-16T11:31:03+08:00">2025-02-16</time>
+      <time title="Created: 2025-02-16 11:31:03 / Modified: 14:49:18" itemprop="dateCreated datePublished" datetime="2025-02-16T11:31:03+08:00">2025-02-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/ABC/" itemprop="url" rel="index"><span itemprop="name">ABC</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/ABC/abc393-%E9%A2%98%E8%A7%A3%E6%95%B4%E5%90%88/" itemprop="url" rel="index"><span itemprop="name">abc393 题解整合</span></a>
+        </span>
     </span>
 
   
@@ -410,24 +670,19 @@ class="math inline">\(0\)</span> 都是没用的，只需考虑 <span
 class="math inline">\(1\)</span>。</p>
 <p>钦定最优情况一定是选择一个 <span class="math inline">\(1\)</span>
 作为合并的起始点，将其两边的 <span class="math inline">\(1\)</span>
-逐渐合并。</p>
+逐渐合并。如果最优情况可能是 <span class="math inline">\(0\)</span>
+类似讨论即可。</p>
 <p>形式化的说，序列中给出了 <span class="math inline">\(M\)</span> 个
 <span class="math inline">\(1\)</span>，其中第 <span
 class="math inline">\(i\)</span> 个 <span
 class="math inline">\(1\)</span> 的位置是 <span
-class="math inline">\(X_i\)</span>。选定一个第 <span
+class="math inline">\(X_i\)</span>。选定第 <span
 class="math inline">\(k\)</span> 个 <span
-class="math inline">\(1\)</span>，它左边有 <span
-class="math inline">\(l_k\)</span> 个 <span
-class="math inline">\(1\)</span>，右边有 <span
-class="math inline">\(r_k\)</span> 个 <span
-class="math inline">\(1\)</span>。所以 <span
-class="math inline">\(l_k+r_k=M-1\)</span>，<span
-class="math inline">\(k=l_k+1\)</span>。</p>
-<p>求 <span class="math inline">\(\sum\limits_{i=1}^{l_k}
-\left[X_k-X_i-1-(k-i-1)\right]+\sum \limits_{i=l_k+2}^{M}
-\left[X_i-X_k-1-(i-k-1)\right]\)</span>
-的最小值（其实上式也可写成绝对值，读者自己写）。</p>
+class="math inline">\(1\)</span>。</p>
+<p>求 <span class="math inline">\(\sum\limits_{i=1}^{k-1}
+\left[X_k-X_i-(k-i)\right]+\sum \limits_{i=k+1}^{M}
+\left[X_i-X_k-(i-k)\right]\)</span>
+的最小值（其实上式也可写成绝对值形式）。</p>
 <blockquote>
 <p>不妨考虑一个子问题。给定 <span class="math inline">\(M\)</span>
 个数轴上的点 <span
@@ -441,19 +696,15 @@ class="math inline">\(M\)</span> 为奇数那么 <span
 class="math inline">\(x=X_{mid}\)</span>，<span
 class="math inline">\(mid\)</span> 为 <span class="math inline">\(1\sim
 M\)</span> 的中间值 <span class="math inline">\(\left\lfloor
-\dfrac{M}{2}\right\rfloor+1\)</span>）。</p>
+\frac{M}{2}\right\rfloor+1\)</span>）。</p>
 <p>对此的证明可以翻开你的人教版七年级第一章有理数的各种教辅资料，应该都有这种题目。</p>
 </blockquote>
-<p>类似于刚才的问题，我们注意到所有 <span
-class="math inline">\(\left|k-i\right|-1\)</span>
-最后的和应当为<strong>定值</strong>（这个读者自己求出）。这意味着我们所要求的就是刚才的子问题。</p>
-<p>事实上，再假设最优情况不是选择一个 <span
-class="math inline">\(1\)</span>，而是 <span
-class="math inline">\(0\)</span> 作为中间点。发现和选择 <span
-class="math inline">\(1\)</span> 最后的结果是相等的，这说明选择 <span
-class="math inline">\(1\)</span> 和选择 <span
-class="math inline">\(0\)</span>
-都是有可能最优的。这和刚才子问题的结论相符合！</p>
+<p>类似于刚才的问题，我们注意到 <span class="math inline">\(\sum
+\left|k-i\right|\)</span> 和 <span
+class="math inline">\(\sum\left|X_k-X_i\right|\)</span>
+都<strong>可以</strong>在 <span class="math inline">\(k=\left\lfloor
+\frac{M}{2}\right\rfloor+1\)</span>
+时取得最小值（原因是我们将其抽象转换成刚才的问题）。</p>
 <p>于是我们解决了这个问题。下面形式化做法：</p>
 <ul>
 <li>找出所有点 <span
