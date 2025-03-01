@@ -128,13 +128,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -164,6 +164,139 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://mahaoming2022.github.io/2024/08/09/%E9%A2%98%E8%A7%A3%EF%BC%9AAT-abc365-d-ABC365D-AtCoder-Janken-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/./images/avatar.png">
+      <meta itemprop="name" content="Ma Haoming">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mahaoming">
+      <meta itemprop="description" content="Mahaoming's home page">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Mahaoming">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/08/09/%E9%A2%98%E8%A7%A3%EF%BC%9AAT-abc365-d-ABC365D-AtCoder-Janken-3/" class="post-title-link" itemprop="url">题解：AT_abc365_d [ABC365D] AtCoder Janken 3</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-08-09 18:44:27" itemprop="dateCreated datePublished" datetime="2024-08-09T18:44:27+08:00">2024-08-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-08-18 22:26:53" itemprop="dateModified" datetime="2024-08-18T22:26:53+08:00">2024-08-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OI/ABC/" itemprop="url" rel="index"><span itemprop="name">ABC</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="at_abc365_d-abc365d">AT_abc365_d [ABC365D]</h1>
+<h2 id="前言">前言</h2>
+<p>又是一道 dp 题……</p>
+<h2 id="翻译">翻译</h2>
+<p>先规定石头剪刀布的规则为：<code>R</code> 打败
+<code>S</code>，<code>S</code> 打败 <code>P</code>，<code>P</code> 打败
+<code>R</code>，出相同的字符视为平局。下简记三种出发为「手法」。</p>
+<p>给出对方的 <span class="math inline">\(n\)</span>
+次出法的序列（一个长度为 <span class="math inline">\(n\)</span>
+字符串），要求你出一个对策，满足：</p>
+<ul>
+<li>你不会输任何一局（若平局不算为输给对方）。</li>
+<li>你出的相邻两个手法不能重复。</li>
+</ul>
+<p><strong>数据保证存在一种策略满足以上要求</strong>。</p>
+<h2 id="思路">思路</h2>
+<h3 id="引入">引入</h3>
+<p>为什么不是贪心？</p>
+<p>一种可能的思路是碰到对手一样的出发就隔一个赢一次，但是很幸运的没有过第
+3 个样例。</p>
+<p>各种分类后发现根本没有通用的方法，故采用 dp。</p>
+<p>众所周知 dp
+很多都是将暴力指数级算法优化成很多维的算法。但这道题只允许线性或 <span
+class="math inline">\(O(n\log n)\)</span>
+的算法通过，故确定复杂度且确定为<strong>线性 dp</strong>。</p>
+<h3 id="动态规划">动态规划</h3>
+<p>若出了手法 <span class="math inline">\(s\)</span> 出了下一个就不能
+<span class="math inline">\(s\)</span>，只能出不同于 <span
+class="math inline">\(s\)</span> 的另外两个，不妨设另外两个为 <span
+class="math inline">\(s_1,s_2\)</span>。</p>
+<p>故转移为：<span
+class="math inline">\(dp(i,s)=dp(i+1,s_1)+dp(i+1,s_2)\)</span></p>
+<p>其中 <span class="math inline">\(i\)</span> 表示决策到了第 <span
+class="math inline">\(i\)</span> 次，其他的如上文所述。</p>
+<p>放代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> rep(i,l,r) for(int i=l;i&lt;=r;i++)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> db;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">2e5</span>+<span class="number">23</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line">string s;</span><br><span class="line"><span class="type">int</span> mem[N][<span class="number">5</span>],c[N];</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Paper 1</span></span><br><span class="line"><span class="comment">Sissor 2</span></span><br><span class="line"><span class="comment">Rock 3</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">dp</span><span class="params">(<span class="type">int</span> d,<span class="type">int</span> lst)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span>&amp; ans=mem[d][lst];</span><br><span class="line">    <span class="keyword">if</span>(ans!=<span class="number">-1</span>) <span class="keyword">return</span> ans;</span><br><span class="line">    <span class="keyword">if</span>(d==n+<span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> ans1=<span class="number">0</span>,ans2=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(c[d]==<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(lst!=<span class="number">2</span>) ans1=<span class="number">1</span>+<span class="built_in">dp</span>(d+<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">        <span class="keyword">if</span>(lst!=<span class="number">1</span>) ans2=<span class="built_in">dp</span>(d+<span class="number">1</span>,<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(c[d]==<span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(lst!=<span class="number">3</span>) ans1=<span class="number">1</span>+<span class="built_in">dp</span>(d+<span class="number">1</span>,<span class="number">3</span>);</span><br><span class="line">        <span class="keyword">if</span>(lst!=<span class="number">2</span>) ans2=<span class="built_in">dp</span>(d+<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(c[d]==<span class="number">3</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(lst!=<span class="number">1</span>) ans1=<span class="number">1</span>+<span class="built_in">dp</span>(d+<span class="number">1</span>,<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span>(lst!=<span class="number">3</span>) ans2=<span class="built_in">dp</span>(d+<span class="number">1</span>,<span class="number">3</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans=<span class="built_in">max</span>(ans1,ans2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> ONLINE_JUDGE</span></span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;in.in&quot;</span>,<span class="string">&quot;r&quot;</span>,stdin);</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;out.out&quot;</span>,<span class="string">&quot;w&quot;</span>,stdout);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    cin&gt;&gt;n&gt;&gt;s;</span><br><span class="line">    s=<span class="string">&#x27; &#x27;</span>+s;</span><br><span class="line">    <span class="built_in">rep</span>(i,<span class="number">1</span>,n)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(s[i]==<span class="string">&#x27;P&#x27;</span>) c[i]=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(s[i]==<span class="string">&#x27;S&#x27;</span>) c[i]=<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(s[i]==<span class="string">&#x27;R&#x27;</span>) c[i]=<span class="number">3</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">memset</span>(mem,<span class="number">-1</span>,<span class="built_in">sizeof</span>(mem));</span><br><span class="line">    cout&lt;&lt;<span class="built_in">dp</span>(<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实现采用了思路比较清晰的记忆化搜索。</p>
+<p>然后就愉快的 AC 了：<a
+target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/171653457"
+class="uri">https://www.luogu.com.cn/record/171653457</a></p>
+<h2 id="总结">总结</h2>
+<p>类似于博弈、游戏等题目不能局限于贪心或一种方法，可以大胆开拓新的思路。</p>
+<h2 id="广告">广告</h2>
+<p>安利一下我的代码仓库。AtCoder 的部分题目代码即调试信息、避坑可以在<a
+target="_blank" rel="noopener" href="https://kkgithub.com/mahaoming2022/lib/tree/m">这里</a>找到。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -613,9 +746,15 @@ TV的视频.wc!都觉得简单是吧.我不禁大骂:小心乐极生悲!(我们�
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2025-02-16 11:31:03 / Modified: 14:49:18" itemprop="dateCreated datePublished" datetime="2025-02-16T11:31:03+08:00">2025-02-16</time>
+      <time title="Created: 2025-02-16 11:31:03" itemprop="dateCreated datePublished" datetime="2025-02-16T11:31:03+08:00">2025-02-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-03-01 22:55:21" itemprop="dateModified" datetime="2025-03-01T22:55:21+08:00">2025-03-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
